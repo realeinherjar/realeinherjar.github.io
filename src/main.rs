@@ -5,7 +5,10 @@ use dioxus_router::prelude::*;
 use dioxus::prelude::*;
 use log::LevelFilter;
 
-use components::{home::Home, notfound::NotFound};
+use components::{
+    home::Home,
+    notfound::NotFound,
+};
 use hooks::theme::Theme;
 
 mod components {
@@ -40,6 +43,8 @@ fn app(cx: Scope) -> Element {
 enum Route {
     #[route("/")]
     Home {},
+    #[route("/blog")]
+    Blog {},
     #[route("/:..route")]
     NotFound { route: Vec<String> },
 }
