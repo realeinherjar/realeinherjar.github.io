@@ -6,12 +6,15 @@ use dioxus::prelude::*;
 use log::LevelFilter;
 
 use components::{
+    blog::{Blog, BlogPost},
     home::Home,
     notfound::NotFound,
 };
 use hooks::theme::Theme;
 
 mod components {
+    pub mod blog;
+    pub mod content;
     pub mod home;
     pub mod nav;
     pub mod notfound;
@@ -20,6 +23,14 @@ mod components {
 mod hooks {
     pub mod theme;
 }
+
+mod utils {
+    pub mod files;
+    pub mod rss;
+}
+
+const URL: &str = "https://einhjerjar.github.io";
+const AUTHOR: &str = "Einhjerjar";
 
 fn main() {
     // Init debug
@@ -40,11 +51,18 @@ fn app(cx: Scope) -> Element {
 }
 
 #[derive(Clone, Routable, Debug, PartialEq)]
+#[rustfmt::skip]
 enum Route {
     #[route("/")]
     Home {},
-    #[route("/blog")]
-    Blog {},
+    #[nest("/blog")]
+        #[layout(Blog)]
+            #[route("/")]
+            Blog {},
+            #[route("/blog/:title")]
+            BlogPost { title: String, content: String },
+        #[end_layout]
+    #[end_nest]
     #[route("/:..route")]
     NotFound { route: Vec<String> },
 }

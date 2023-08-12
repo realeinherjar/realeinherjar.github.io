@@ -14,8 +14,15 @@ dioxus-router = { version = "0.4", features = ["web"] }
 pulldown-cmark = { version = "0.9.3", features = ["simd"] }
 log = "0.4"
 dioxus-logger = "0.4"
+pulldown-cmark = { version = "0.9", features = ["simd"] }
 dioxus-free-icons = { version = "0.7", features = [
   "font-awesome-brands",
   "font-awesome-solid",
 ] }
 js-sys = "0.3"
+rss = "2"
+fronma = "0.2"
+serde = { version = "1", features = ["derive"] }
+pulldown-cmark-frontmatter = "0.1"
+toml = "0.7.6"
+anyhow = "1.0.72"
