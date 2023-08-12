@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use dioxus_free_icons::{
-    icons::fa_solid_icons::{FaBook, FaCircleHalfStroke, FaHouse, FaRss},
+    icons::fa_solid_icons::{FaCircleHalfStroke, FaHouse},
     Icon,
 };
 use dioxus_router::prelude::*;
@@ -22,16 +22,6 @@ pub fn Nav(cx: Scope) -> Element {
                     to: Route::Home {},
                     Icon {height: 30, width: 30, icon: FaHouse}
                 }
-                Link {
-                    class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
-                    to: Route::Blog {},
-                    Icon {height: 30, width: 30, icon: FaBook}
-                }
-                a {
-                    class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
-                    href: "/feed.xml",
-                    Icon {height: 30, width: 30, icon: FaRss}
-                }
                 a {
                     class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
                     href: "javascript:;",
@@ -46,7 +36,6 @@ pub fn Nav(cx: Scope) -> Element {
                                 Theme::Dark
                             },
                         };
-                        cx.needs_update();
                     },
                     Icon {height: 30, width: 30, icon: FaCircleHalfStroke}
                 }

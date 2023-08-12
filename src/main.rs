@@ -5,18 +5,16 @@ use dioxus_router::prelude::*;
 use dioxus::prelude::*;
 use log::LevelFilter;
 
-use components::blog::Blog;
-use components::home::Home;
+use components::{home::Home, notfound::NotFound};
 use hooks::theme::Theme;
 
 mod components {
-    pub mod blog;
     pub mod home;
     pub mod nav;
+    pub mod notfound;
 }
 
 mod hooks {
-    pub mod markdown;
     pub mod theme;
 }
 
@@ -31,6 +29,8 @@ fn main() {
 
 fn app(cx: Scope) -> Element {
     use_shared_state_provider(cx, || Theme::Dark);
+    // toggle dark theme
+    let _ = js_sys::eval("document.documentElement.classList.add('dark');");
     render! {
         Router::<Route> {}
     }
@@ -40,6 +40,6 @@ fn app(cx: Scope) -> Element {
 enum Route {
     #[route("/")]
     Home {},
-    #[route("/blog")]
-    Blog {},
+    #[route("/:..route")]
+    NotFound { route: Vec<String> },
 }
