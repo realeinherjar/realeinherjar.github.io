@@ -20,17 +20,17 @@ pub fn Nav(cx: Scope) -> Element {
                 Link {
                     class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
                     to: Route::Home {},
-                    Icon {height: 22, width: 22, icon: FaHouse}
+                    Icon {height: 30, width: 30, icon: FaHouse}
                 }
                 Link {
                     class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
                     to: Route::Blog {},
-                    Icon {height: 22, width: 22, icon: FaBook}
+                    Icon {height: 30, width: 30, icon: FaBook}
                 }
                 a {
                     class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
                     href: "/feed.xml",
-                    Icon {height: 22, width: 22, icon: FaRss}
+                    Icon {height: 30, width: 30, icon: FaRss}
                 }
                 a {
                     class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
@@ -48,7 +48,7 @@ pub fn Nav(cx: Scope) -> Element {
                         };
                         cx.needs_update();
                     },
-                    Icon {height: 22, width: 22, icon: FaCircleHalfStroke}
+                    Icon {height: 30, width: 30, icon: FaCircleHalfStroke}
                 }
             }
         }
