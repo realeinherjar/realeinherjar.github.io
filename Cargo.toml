@@ -1,0 +1,21 @@
+[package]
+name = "einherjar-site"
+version = "0.1.0"
+authors = ["Einherjar <realeinherjar@proton.me>"]
+edition = "2021"
+
+
+[dependencies]
+dioxus-web = { version = "0.4" }
+dioxus = { version = "0.4" }
+wasm-logger = "0.2.0"
+console_error_panic_hook = "0.1.7"
+dioxus-router = { version = "0.4", features = ["web"] }
+log = "0.4.19"
+dioxus-logger = "0.4.1"
+pulldown-cmark = { version = "0.9.3", features = ["simd"] }
+dioxus-free-icons = { version = "0.7.0", features = [
+  "font-awesome-brands",
+  "font-awesome-solid",
+] }
+js-sys = "0.3.64"
