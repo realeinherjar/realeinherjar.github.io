@@ -21,6 +21,7 @@ mod components {
 }
 
 mod hooks {
+    pub mod markdown;
     pub mod theme;
 }
 
@@ -45,9 +46,7 @@ fn app(cx: Scope) -> Element {
     use_shared_state_provider(cx, || Theme::Dark);
     // toggle dark theme
     let _ = js_sys::eval("document.documentElement.classList.add('dark');");
-    render! {
-        Router::<Route> {}
-    }
+    render! { Router::<Route> {} }
 }
 
 #[derive(Clone, Routable, Debug, PartialEq)]

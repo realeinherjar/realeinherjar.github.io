@@ -4,9 +4,6 @@ use dioxus::prelude::*;
 pub fn NotFound(cx: Scope, route: Vec<String>) -> Element {
     render! {
         h1 { "Page not found" }
-        pre {
-            color: "red",
-            "log:\nattemped to navigate to: {route:?}"
-        }
+        pre { color: "red", "log:\nattemped to navigate to: {route:?}" }
     }
 }
