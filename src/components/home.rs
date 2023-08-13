@@ -12,11 +12,11 @@ use crate::components::nav::Nav;
 
 pub fn Home(cx: Scope) -> Element {
     render! {
-        section { class: "font-sans antialiased leading-normal tracking-wider bg-cover bg-white dark:bg-gray-600 dark:text-white",
+        section { class: "font-sans antialiased leading-normal tracking-wider bg-cover",
             div { class: "max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0",
                 div {
                     id: "profile",
-                    class: "w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white dark:bg-gray-600 mx-6 lg:mx-0",
+                    class: "w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl mx-6 lg:mx-0",
                     div { class: "p-4 md:p-12 text-center lg:text-left",
                         div {
                             class: "block lg:hidden rounded-full shadow-2xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center",
@@ -29,17 +29,17 @@ pub fn Home(cx: Scope) -> Element {
                             class: "mt-6 pb-16 pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center",
                             id: "social-icons",
                             Link {
-                                class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
+                                class: "block py-2 pl-3 pr-4 text-inherit hover:text-gray-800 dark:hover:text-gray-200",
                                 to: "https://github.com/realeinherjar",
                                 Icon { height: 30, width: 30, icon: FaGithub }
                             }
                             Link {
-                                class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
+                                class: "block py-2 pl-3 pr-4 text-inherit hover:text-gray-800 dark:hover:text-gray-200",
                                 to: "https://primal.net/p/npub1mcgkta7n5ptnha34acasmld7z3psp6lwlmqgqwzp9c4jevnv25lqm02agr",
                                 Icon { height: 30, width: 30, icon: FaBullhorn }
                             }
                             Link {
-                                class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
+                                class: "block py-2 pl-3 pr-4 text-inherit hover:text-gray-800 dark:hover:text-gray-200",
                                 to: "mailto:realeinherjar@proton.me",
                                 Icon { height: 30, width: 30, icon: FaEnvelope }
                             }

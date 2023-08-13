@@ -742,6 +742,10 @@ video {
   color: rgb(14 116 144 / var(--tw-text-opacity));
 }
 
+.text-inherit {
+  color: inherit;
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -764,6 +768,10 @@ video {
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.hover\:text-inherit:hover {
+  color: inherit;
 }
 
 :is(.dark .dark\:bg-gray-600) {

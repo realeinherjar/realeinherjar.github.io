@@ -23,7 +23,7 @@ pub fn Nav(cx: Scope) -> Element {
                 }
                 Link {
                     class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
-                    to: Route::Blog {},
+                    to: Route::BlogList {},
                     Icon { height: 30, width: 30, icon: FaBook }
                 }
                 Link {

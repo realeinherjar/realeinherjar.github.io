@@ -6,7 +6,7 @@ use dioxus::prelude::*;
 use log::LevelFilter;
 
 use components::{
-    blog::{Blog, BlogPost},
+    blog::{Blog, BlogList, BlogPost},
     home::Home,
     nav::Nav,
     notfound::NotFound,
@@ -31,7 +31,7 @@ mod utils {
     pub mod rss;
 }
 
-const URL: &str = "https://einhjerjar.github.io";
+const URL: &str = "https://realeinherjar.github.io";
 const AUTHOR: &str = "Einhjerjar";
 
 fn main() {
@@ -47,7 +47,9 @@ fn app(cx: Scope) -> Element {
     use_shared_state_provider(cx, || Theme::Dark);
     // toggle dark theme
     let _ = js_sys::eval("document.documentElement.classList.add('dark');");
-    render! { Router::<Route> {} }
+    render! {
+        div { class:"bg-white dark:bg-gray-600 dark:text-white", Router::<Route> {} }
+    }
 }
 
 #[derive(Clone, Routable, Debug, PartialEq)]
@@ -57,11 +59,15 @@ enum Route {
     #[layout(Nav)]
         #[route("/")]
         Home {},
-        #[route("/blog")]
-        Blog {},
-        // BlogPost has a dynamic title
-        #[route("/blog/:title")]
-        BlogPost { title: String, content: String },
+        #[nest("/blog")]
+            #[layout(Blog)]
+            #[route("/")]
+            BlogList {},
+            // BlogPost has a dynamic name
+            #[route("/post/:name")]
+            BlogPost { name: String, content: String },
+            #[end_layout]
+        #[end_nest]
     #[end_layout]
     #[route("/:..route")]
     NotFound { route: Vec<String> },
