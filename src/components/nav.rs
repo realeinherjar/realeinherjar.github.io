@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use dioxus_free_icons::{
-    icons::fa_solid_icons::{FaCircleHalfStroke, FaHouse},
+    icons::fa_solid_icons::{FaBook, FaCircleHalfStroke, FaHouse, FaRss},
     Icon,
 };
 use dioxus_router::prelude::*;
@@ -12,7 +12,7 @@ pub fn Nav(cx: Scope) -> Element {
     let theme = use_shared_state::<Theme>(cx).unwrap();
     let current_theme = *theme.read();
     render! {
-        nav { class: "flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 antialiased leading-normal tracking-wider",
+        nav { class: "flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 antialiased leading-normal tracking-wider bg-cover bg-white dark:bg-gray-600 dark:text-white",
             div {
                 class: "max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4",
                 id: "navbar",
@@ -20,6 +20,16 @@ pub fn Nav(cx: Scope) -> Element {
                     class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
                     to: Route::Home {},
                     Icon { height: 30, width: 30, icon: FaHouse }
+                }
+                Link {
+                    class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
+                    to: Route::BlogList {},
+                    Icon { height: 30, width: 30, icon: FaBook }
+                }
+                Link {
+                    class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
+                    to: "feed.xml",
+                    Icon { height: 30, width: 30, icon: FaRss }
                 }
                 a {
                     class: "block py-2 pl-3 pr-4 text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
@@ -41,5 +51,6 @@ pub fn Nav(cx: Scope) -> Element {
                 }
             }
         }
+        Outlet::<Route> {}
     }
 }
