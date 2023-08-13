@@ -11,11 +11,13 @@ fn create_rss_item(post: &BlogPost, date: &str) -> Item {
     let mut item = ItemBuilder::default();
 
     item.title(Some(post.title.to_string()));
+    #[rustfmt::skip]
     item.link(Some(format!( "{URL}/blog/{0}", post.link ).to_string()));
     item.author(Some(AUTHOR.to_string()));
     item.pub_date(Some(date.to_string()));
     item.description(Some(post.description.to_string()));
     item.content(Some(post.content.to_string()));
+    #[rustfmt::skip]
     item.categories(vec![ Category { name: post.category.to_string(), domain: None } ]);
     item.source(Some(Source {
         url: URL.to_string(),
