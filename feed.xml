@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Einherjar</title><link>https://realeinherjar.github.io</link><description>Einherjar&apos;s Blog</description><language>english</language><item><title>Hello World</title><link>https://realeinherjar.github.io/blog//blog/hello/</link><description><![CDATA[How I created this website]]></description><author>Einherjar</author><category>Tech</category><pubDate>Sun, 13 Aug 2023 18:10:00 GMT</pubDate><source url="https://realeinherjar.github.io">Einherjar</source><content:encoded><![CDATA[<h1 id="hello-world">Hello World</h1>
+<p>This is the first blog entry in the blog.</p>
+<p>I am building this blog using <a
+href="https://dioxuslabs.com">Dioxus</a> in Rust. This is hosted on <a
+href="https://github.com/realeinherjar/realeinherjar.github.io">Github</a>.
+Feel free to check the code.</p>
+<p>The RSS feed is generated using the <a
+href="https://github.com/rust-syndication/rss"><code>rss</code>
+crate</a>.</p>
+<p>Technically speaking, Rust and Dioxus are straightforward to use.
+However, <a href="https://tailwindcss.com/"><code>tailwindcss</code></a>
+is a bit of a pain to use. Documentation sucks and the API is not very
+intuitive. I welcome any PRs to improve it. Honestly, I prefer to hammer
+my fingers than to have to deal with CSS.</p>
+<p>For the Rustacean out there, this personal site and blog is ready for
+you to fork and use. You can add API endpoints with <a
+href="https://github.com/tokio-rs/axum"><code>axum</code></a> and <a
+href="https://github.com/jmoiron/sqlx"><code>sqlx</code></a>, and
+consume them with <a
+href="https://github.com/seanmonstar/reqwest"><code>reqwest</code></a>.
+The license for the code is MIT, and for the content is CC-BY-NC-SA.</p>
+<p>License: CC-BY-NC-SA</p>
+]]></content:encoded></item></channel></rss>
