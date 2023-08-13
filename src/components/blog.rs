@@ -16,9 +16,17 @@ pub fn SinglePost(cx: Scope, post: BlogPost) -> Element {
     let BlogPost { content, .. } = post;
 
     render! {
-        section { class: "font-sans antialiased leading-normal tracking-wider bg-cover bg-white dark:bg-gray-600 dark:text-white",
+        section { class: "font-sans overflow-hidden bg-white dark:bg-gray-600 dark:text-white",
             div { class: "container lg:px-20 xl:px-48 pt-12 pb-12 mx-auto",
-                div { class: "flex w-full mb-20 flex-wrap list-none", article { class: "markdown-body", dangerous_inner_html: format_args!("{}", content) } }
+                style {
+                    ".markdown-body h1 {{ font-size: 2.125rem; font-weight: bold; }}"
+                    ".markdown-body h2 {{ font-size: 1.875rem; font-weight: bold; }}"
+                    ".markdown-body ul {{ list-style: disc; }}"
+                    ".markdown-body li {{ display: list-item; }}"
+                    ".markdown-body img {{ max-height: 500px; margin-left: auto; margin-right: auto; padding-left: 4px; padding-right: 4px; }}"
+                    ".markdown-body a {{ color: #5C6BC0; }}"
+                }
+                article { class: "markdown-body space-y-4", dangerous_inner_html: format_args!("{}", content) }
             }
         }
     }
