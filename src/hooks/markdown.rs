@@ -9,7 +9,7 @@ pub fn use_markdown(cx: &ScopeState) -> &dyn Fn(String) -> String {
             let mut extractor = FrontmatterExtractor::from_markdown(str);
 
             let mut output = String::new();
-            html::push_html(&mut output, &mut extractor);
+            html::push_html(&mut output, extractor);
 
             output
         }

@@ -22,8 +22,9 @@ pub struct MarkdownProps<'a> {
 }
 
 pub fn Markdown<'a>(cx: Scope<'a, MarkdownProps<'a>>) -> Element {
-    let md_parser = use_markdown(&cx);
+    let md_parser = use_markdown(cx);
     let content = md_parser(cx.props.content.clone());
     let extra_class = &cx.props.class;
-    cx.render(rsx! {div { id: "markdown-body", class: "prose {extra_class}", dangerous_inner_html: "{content}" }})
+
+    render! {div { id: "markdown-body", class: "prose {extra_class}", dangerous_inner_html: "{content}" }}
 }

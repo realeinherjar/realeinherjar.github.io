@@ -8,6 +8,7 @@ use log::LevelFilter;
 use components::{
     blog::{Blog, BlogPost},
     home::Home,
+    nav::Nav,
     notfound::NotFound,
 };
 use hooks::theme::Theme;
@@ -52,16 +53,16 @@ fn app(cx: Scope) -> Element {
 #[derive(Clone, Routable, Debug, PartialEq)]
 #[rustfmt::skip]
 enum Route {
-    #[route("/")]
-    Home {},
-    #[nest("/blog")]
-        #[layout(Blog)]
-            #[route("/")]
-            Blog {},
-            #[route("/blog/:title")]
-            BlogPost { title: String, content: String },
-        #[end_layout]
-    #[end_nest]
+    // All routes under the NavBar layout will be rendered inside of the NavBar Outlet
+    #[layout(Nav)]
+        #[route("/")]
+        Home {},
+        #[route("/blog")]
+        Blog {},
+        // BlogPost has a dynamic title
+        #[route("/blog/:title")]
+        BlogPost { title: String, content: String },
+    #[end_layout]
     #[route("/:..route")]
     NotFound { route: Vec<String> },
 }
