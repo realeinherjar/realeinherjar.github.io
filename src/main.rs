@@ -1,46 +1,49 @@
 #![allow(non_snake_case)]
 
-use dioxus_router::prelude::*;
-
 use dioxus::prelude::*;
+use dioxus_router::prelude::*;
 use log::LevelFilter;
 
+use hooks::theme::Theme;
+
+use utils::rss::write_rss_file;
+
 use components::{
-    blog::{Blog, BlogList, BlogPost},
+    blog::{BlogList, PostHello},
     home::Home,
     nav::Nav,
     notfound::NotFound,
 };
-use hooks::theme::Theme;
 
 mod components {
     pub mod blog;
-    pub mod content;
     pub mod home;
     pub mod nav;
     pub mod notfound;
 }
 
 mod hooks {
-    pub mod markdown;
     pub mod theme;
 }
 
 mod utils {
-    pub mod files;
     pub mod rss;
 }
 
 const URL: &str = "https://realeinherjar.github.io";
-const AUTHOR: &str = "Einhjerjar";
+const AUTHOR: &str = "Einherjar";
 
 fn main() {
     // Init debug
     dioxus_logger::init(LevelFilter::Info).expect("failed to init logger");
     console_error_panic_hook::set_once();
-
     log::info!("starting app");
+
+    // Launch App
     dioxus_web::launch(app);
+
+    // RSS Feed
+    write_rss_file();
 }
 
 fn app(cx: Scope) -> Element {
@@ -48,7 +51,7 @@ fn app(cx: Scope) -> Element {
     // toggle dark theme
     let _ = js_sys::eval("document.documentElement.classList.add('dark');");
     render! {
-        div { class:"bg-white dark:bg-gray-600 dark:text-white", Router::<Route> {} }
+        div { class: "bg-white dark:bg-gray-600 dark:text-white", Router::<Route> {} }
     }
 }
 
@@ -60,13 +63,10 @@ enum Route {
         #[route("/")]
         Home {},
         #[nest("/blog")]
-            #[layout(Blog)]
             #[route("/")]
             BlogList {},
-            // BlogPost has a dynamic name
-            #[route("/post/:name")]
-            BlogPost { name: String, content: String },
-            #[end_layout]
+            #[route("/hello")]
+            PostHello {},
         #[end_nest]
     #[end_layout]
     #[route("/:..route")]

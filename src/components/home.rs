@@ -8,8 +8,6 @@ use dioxus_free_icons::{
 };
 use dioxus_router::prelude::*;
 
-use crate::components::nav::Nav;
-
 pub fn Home(cx: Scope) -> Element {
     render! {
         section { class: "font-sans antialiased leading-normal tracking-wider bg-cover",

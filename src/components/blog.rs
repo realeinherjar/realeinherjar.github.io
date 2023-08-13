@@ -1,39 +1,62 @@
 use dioxus::prelude::*;
 use dioxus_router::prelude::*;
 
-use crate::components::content::Markdown;
-use crate::Route;
-
-#[inline_props]
-pub fn Blog(cx: Scope) -> Element {
-    render! {
-        Outlet::<Route> {}
-    }
+#[derive(PartialEq, Eq)]
+pub struct BlogPost {
+    pub category: &'static str,
+    pub date: &'static str,
+    pub title: &'static str,
+    pub description: &'static str,
+    pub link: &'static str,
+    pub content: &'static str,
 }
 
 #[inline_props]
-pub fn BlogList(cx: Scope) -> Element {
-    let content = include_str!("../markdown/2023-08-13-hello.md").to_string();
+pub fn SinglePost(cx: Scope, post: BlogPost) -> Element {
+    let BlogPost { content, .. } = post;
+
     render! {
         section { class: "font-sans antialiased leading-normal tracking-wider bg-cover bg-white dark:bg-gray-600 dark:text-white",
-            div { class: "max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0",
-                div {
-                    id: "blog-list",
-                    class: "w-full rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl mx-6 lg:mx-0",
-                    h1 { class: "text-3xl font-bold pt-6 lg:pt-0", "Blog" }
-                    div { class: "mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 opacity-25" }
-                     ul { class: "pt-8 text-lg",
-                        li {
-                            Link {
-                                to: Route::BlogPost {
-                                    name: "2023-08-13 - Hello World".to_string(),
-                                    content:  include_str!("../markdown/2023-08-13-hello.md").to_string(),
-                                },
-                                "2023-08-13 - Hello World"
+            div { class: "container lg:px-20 xl:px-48 pt-12 pb-12 mx-auto",
+                div { class: "flex w-full mb-20 flex-wrap list-none", article { class: "markdown-body", dangerous_inner_html: format_args!("{}", content) } }
+            }
+        }
+    }
+}
+
+pub const POST_HELLO: BlogPost = BlogPost {
+    category: "Tech",
+    date: "2023-08-13",
+    title: "Hello World",
+    description: "How I created this website",
+    link: "/blog/hello/",
+    content: include_str!("../../posts/2023-08-13-hello.html"),
+};
+
+#[inline_props]
+pub fn PostHello(cx: Scope) -> Element {
+    render! { SinglePost { post: POST_HELLO } }
+}
+
+pub const POSTS: &[BlogPost] = &[POST_HELLO];
+
+#[inline_props]
+pub fn BlogList(cx: Scope) -> Element {
+    render! {
+        section { class: "body-font overflow-hidden dark:bg-ideblack",
+            div { class: "container max-w-screen-lg pt-12 pb-12 mx-auto",
+                div { class: "-my-8 px-8 pb-12",
+                    // Header
+                    h2 { class: "dark:text-white mb-8 md:mb-16 sm:text-3xl text-2xl font-medium title-font font-sans",
+                        "Recent Blog Posts"
+                    }
+                    section { class: "body-font overflow-hidden dark:bg-ideblack",
+                        div { class: "container px-6 mx-auto",
+                            div { class: "-my-8 divide-y-2 divide-gray-100",
+                                POSTS.iter().map(|post| rsx! { BlogPostItem { post: post } })
                             }
                         }
                     }
-                    Markdown {class: "inherit-text", content: content.into() }
                 }
             }
         }
@@ -41,16 +64,30 @@ pub fn BlogList(cx: Scope) -> Element {
 }
 
 #[inline_props]
-pub fn BlogPost(cx: Scope, name: String, content: String) -> Element {
+fn BlogPostItem(cx: Scope, post: &'static BlogPost) -> Element {
+    let BlogPost {
+        category,
+        date,
+        title,
+        description,
+        link,
+        ..
+    } = post;
+
     render! {
-        section { class: "font-sans antialiased leading-normal tracking-wider bg-cover bg-white dark:bg-gray-600 dark:text-white",
-            div { class: "max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0",
-                h2 { "Blog Post: {name}" }
-                div {
-                    id: "blog-post",
-                    class: "w-full rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl mx-6 lg:mx-0",
-                    Markdown {class: "inherit-text", content: content.into() }
+        div { class: "py-8 flex flex-wrap md:flex-nowrap",
+            div { class: "md:w-32 md:mb-0 mb-6 flex-shrink-0 flex flex-col",
+                span { class: "font-semibold title-font text-gray-600 dark:text-white", "{category}" }
+                span { class: "mt-1 text-gray-500 text-sm", "{date}" }
+            }
+            div { class: "pl-3 md:flex-grow",
+                h2 { class: "text-2xl font-medium text-gray-900 title-font mb-2 dark:text-white",
+                    "{title}"
                 }
+                p { class: "leading-relaxed dark:text-white text-base dark:opacity-75",
+                    "{description}"
+                }
+                Link { class: "text-indigo-400 inline-flex items-center mt-4", to: *link, "Read more" }
             }
         }
     }
