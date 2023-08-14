@@ -104,22 +104,6 @@ pub fn Home(cx: Scope) -> Element {
                                     height: "30"
                                 }
                             }
-                            a { href: "https://www.lightningdevkit.org",
-                                img {
-                                    src: "https://avatars.githubusercontent.com/u/60484029?s: 200&v: 4",
-                                    alt: "ldk",
-                                    width: "30",
-                                    height: "30"
-                                }
-                            }
-                            a { href: "https://www.dioxuslabs.com",
-                                img {
-                                    src: "https://avatars.githubusercontent.com/u/79236386?s: 200&v: 4",
-                                    alt: "ldk",
-                                    width: "30",
-                                    height: "30"
-                                }
-                            }
                             a { href: "https://www.nixos.org/",
                                 img {
                                     src: "https://github.com/NixOS/nixos-artwork/raw/master/logo/nix-snowflake.svg",
