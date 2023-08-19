@@ -6,7 +6,56 @@
     <description>Recent content on Einherjar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright><atom:link href="https://realeinherjar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+    <lastBuildDate>Sat, 19 Aug 2023 18:07:18 +0000</lastBuildDate><atom:link href="https://realeinherjar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Censorship</title>
+      <link>https://realeinherjar.github.io/2023-08-19-censorship/</link>
+      <pubDate>Sat, 19 Aug 2023 18:07:18 +0000</pubDate>
+      
+      <guid>https://realeinherjar.github.io/2023-08-19-censorship/</guid>
+      <description>In Brazil, there&amp;rsquo;s a new law that is being proposed that will allow the government to censor social media posts. The law is called PL 2630/2020 and it&amp;rsquo;s being called the &amp;ldquo;Fake News Law&amp;rdquo;. It&amp;rsquo;s a very dangerous law that will allow the government to censor any post that it deems &amp;ldquo;fake news&amp;rdquo;. The problem is that the definition of &amp;ldquo;fake news&amp;rdquo; is very broad and can be used to censor any post that the government doesn&amp;rsquo;t like.</description>
+      <content:encoded><![CDATA[<p>In Brazil, there&rsquo;s a new law that is being proposed that will allow the government to censor social media posts.
+The law is called <a href="https://www.camara.leg.br/propostas-legislativas/2256735">PL 2630/2020</a> and it&rsquo;s being called the &ldquo;Fake News Law&rdquo;.
+It&rsquo;s a very dangerous law that will allow the government to censor any post that it deems &ldquo;fake news&rdquo;.
+The problem is that the definition of &ldquo;fake news&rdquo; is very broad and can be used to censor any post that the government doesn&rsquo;t like.</p>
+<p>It is actually already being used to censor opinions that the government doesn&rsquo;t like.
+On <a href="https://www1.folha.uol.com.br/poder/2023/05/google-retira-do-ar-link-com-informacoes-contra-o-pl-das-fake-news.shtml">May 2nd, 2023, the Ministry of Justice ordered Google to remove a blog post from its main page</a>.
+This blog post was Google&rsquo;s opinion on the law and why it was bad.
+You can find it <a href="https://blog.google/intl/pt-br/novidades/iniciativas/PL2630/">here</a>.</p>
+<p>Then, on <a href="https://www.infomoney.com.br/politica/alexandre-de-moraes-abre-inquerito-e-manda-investigar-diretores-do-google-e-do-telegram/">May 12th, 2023, the Supreme Minister Alexandre de Moraes opened a criminal investigation of the Google (and Telegram) directors,
+on the grounds of &ldquo;abusive campaign against the PL 2630/2020&rdquo;</a>.
+I don&rsquo;t think that constitutes a crime, but the Supreme Minister does.
+For my point of view, it&rsquo;s just an opinion, and it&rsquo;s not a crime to have an opinion.
+Despite not liking Google, I think that it is a valid participant in the discussion of the law.
+Such discussions should happen in a healthy democracy.</p>
+<p>Of course, Google used its power to promote its opinion, but <em>again</em> that&rsquo;s not a crime.
+Let&rsquo;s do a thought experiment, let&rsquo;s go back to 1850s USA.
+Dred Scott v. Sandford (1857), according to <a href="https://en.wikipedia.org/wiki/Dred_Scott_v._Sandford">Wikipedia</a>,
+was a &ldquo;landmark decision of the United States Supreme Court that held the U.S. Constitution did not extend American citizenship to people of black African descent,
+and thus they could not enjoy the rights and privileges the Constitution conferred upon American citizens&rdquo;.
+That&rsquo;s pretty bad decision, right?
+Anyone in their right mind today would agree that violates human rights.
+Now, imagine that one of the most powerful companies at that time,
+<a href="https://en.wikipedia.org/wiki/Pacific_Mail_Steamship_Company">Pacific Main Steamship Company</a>,
+would use its power to promote the abolitionist movement.
+Specifically, it would give a pamphlet to every passenger that boarded its ships with the opinion that the American citizenship should be extended to people of &ldquo;black African descent&rdquo;.
+What would happen to the company?
+Would it be a crime to promote the abolitionist movement?
+Would the Supreme Court open a criminal investigation against the company and its directors?
+Think about this for a moment&hellip;</p>
+<p>The problem with censorship is that it&rsquo;s very easy to abuse.
+I honestly don&rsquo;t care about Google, or the PL 2630/2020.
+I know that the internet is decentralized, and content will always find its way and be available somewhere.
+There&rsquo;s no way to stop it.
+But, I am gravely concerned with the precedents that the Brazilian government and Brazilian Supreme Court are setting when they censor opinions that they don&rsquo;t like.</p>
+<h2 id="license">License</h2>
+<p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-SA 4.0"  />
+</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>About</title>
       <link>https://realeinherjar.github.io/about/</link>
