@@ -2,7 +2,9 @@
 title: "What the hell is an Elliptic Curve?"
 date: 2023-10-01T16:08:15-03:00
 draft: true
+javascript: true
 math: true
+mermaid: false
 ---
 
 > Warning: This post has [KaTeX](https://katex.org/) enabled,
@@ -23,7 +25,7 @@ but also in many other fields of mathematics,
 such as number theory, algebraic geometry, and topology.
 
 My main argument is that elliptic curves are not that hard to understand.
-Additionally, since encryption is ubiquous in our daily lives,
+Additionally, since encryption is ubiquitous in our daily lives,
 **understanding them is important to be a well-informed citizen**.
 I'll try to explain the concepts in a simple way,
 but I'll assume you have some basic knowledge of algebra and math symbols.
@@ -33,7 +35,7 @@ you'll be able to make connections more easily.
 
 ## What is an Elliptic Curve?
 
-**An [*elliptic curve*](https://en.wikipedia.org/wiki/Elliptic_curve) is a curve defined by the equation**
+**An [_elliptic curve_](https://en.wikipedia.org/wiki/Elliptic_curve) is a curve defined by the equation**
 
 $$y^2 = x^3 + ax + b$$
 
@@ -70,7 +72,7 @@ you'll get a new point:
 
 This is how you **add two points in an elliptic curve**.
 Note that the result of adding two points is **also a point in the curve**.
-This property is called *closure*.
+This property is called _closure_.
 For any two points $P$ and $P^\prime$ in the curve,
 $P + P^\prime$ is also a point in the curve.
 
@@ -90,18 +92,18 @@ where $\mathcal{O}$ is the **point at infinity**.
 
 ### Point Addition Properties
 
-Point addition satifies some properties:
+Point addition satisfies some properties:
 
 - **Identity**: $P + \mathcal{O} = \mathcal{O} + P = P$
 - **Commutativity**: $P + P^\prime = P^\prime + P$
-- **Associavitiy**: $(P + P^\prime) + P^{\prime\prime} = P + (P^\prime + P^{\prime\prime})$
-- **Invertibility**: $P + (-P) = \mathcal{O}$
+- **Associativity**: $(P + P^\prime) + P^{\prime\prime} = P + (P^\prime + P^{\prime\prime})$
+- **Inverse Element**: $P + (-P) = \mathcal{O}$
 - **Closure**: $P + P^\prime$ is a point in the curve
 
 Hey this is very similar to addition of integers!
 But using points instead of integers.
 
-In fact we can define **multiplication** of a point $P$ by an integer $n$ as:
+In fact, we can define **multiplication** of a point $P$ by an integer $n$ as:
 
 $$\underbrace{P + P + \cdots + P}_{n \text{ times}}$$
 
@@ -109,8 +111,8 @@ $$\underbrace{P + P + \cdots + P}_{n \text{ times}}$$
 
 The set of points in an elliptic curve with the point at infinity $\mathcal{O}$
 along with a binary operation $+$ that satisfies the properties above is called an
-[*Abelian group*](https://en.wikipedia.org/wiki/Abelian_group).
-In honor of Niels Henrik Abel, an Abelain group is a **set with a binary operation that
+[_Abelian group_](https://en.wikipedia.org/wiki/Abelian_group).
+In honor of Niels Henrik Abel, an Abelian group is a **set with a binary operation that
 satisfies all the properties above**.
 
 Another example of an Abelian group is the set of integers $\mathbb{Z}$ with addition $+$.
@@ -141,7 +143,7 @@ and multiplication is **distributive**
 
 $$a \times (b + c) = a \times b + a \times c.$$
 
-Also there are two special elements in the field,
+Also, there are two special elements in the field,
 called the **additive identity** $-a$ and the **multiplicative identity** $a^{-1}$,
 such that
 
@@ -162,7 +164,7 @@ $$a \div b = a \times b^{-1}.$$
 ### Finite Fields
 
 Now we are ready for finite fields.
-A [*finite field*](https://en.wikipedia.org/wiki/Finite_field), also called a Galois field (in honor of Évariste Galois),
+A [_finite field_](https://en.wikipedia.org/wiki/Finite_field), also called a Galois field (in honor of Évariste Galois),
 is a **field with a finite number of elements.
 As with any field, a finite field is a set on which the operations of multiplication,
 addition, subtraction and division are defined and satisfy the rules above for fields**.
@@ -178,7 +180,7 @@ In general, $\mathbb{Z}_n$ is a finite field with $n$ elements:
 
 $$\mathbb{Z}_n = \lbrace 0, 1, 2, \ldots, n - 1 \rbrace.$$
 
-**The number of elements in a finite field is called the *order* of the field**.
+**The number of elements in a finite field is called the _order_ of the field**.
 The order of a finite field is **always a prime number $p$**.
 The $\mathbb{Z}_4$ example above is a finite field of order 2.
 To see that notice that $4$ is a composite number,
@@ -195,11 +197,11 @@ $$a = 2 \times b,$$
 
 where $b$ is an element in $\mathbb{Z}_2$.
 
-Hence not every element of $\mathbb{Z}_4$ is unique and they are equivalent to the elements in $\mathbb{Z}_2$.
+Hence, not every element of $\mathbb{Z}_4$ is unique, and they are equivalent to the elements in $\mathbb{Z}_2$.
 
 In general if $n$ is a composite number,
 then $\mathbb{Z}_n$ is not a finite field.
-However if $n = r \times s$ where $r$ and $s$ are prime numbers,
+However, if $n = r \times s$ where $r$ and $s$ are prime numbers,
 and $r < s$,
 then $\mathbb{Z}_n$ is a finite field of order $r$.
 
@@ -218,18 +220,18 @@ For example, in $\mathbb{Z}_3$,
 
 $$1 - 2 = -1 \mod 3 = 2.$$
 
-Multiplication in finite fields can be writen as multiple additions.
+Multiplication in finite fields can be written as multiple additions.
 For example, in $\mathbb{Z}_3$,
 
 $$2 \times 2 = 2 + 2 = 4 \mod 3 = 1.$$
 
-Expontiation in finite fields can be writen as multiple multiplications.
+Exponentiation in finite fields can be written as multiple multiplications.
 For example, in $\mathbb{Z}_3$,
 
 $$2^2 = 2 \times 2 = 4 \mod 3 = 1.$$
 
 This is very trivial for any finite field.
-However for division we are pretty much screwed.
+However, for division we are pretty much screwed.
 It is really hard to find the multiplicative inverse of an element in a finite field.
 For example, suppose that we have numbers $a,b$ in a very large finite field $\mathbb{Z}_n$,
 such that
@@ -240,8 +242,8 @@ Then we can write division as
 
 $$a = c \div b = c \times b^{-1} \mod n.$$
 
-Now  we need to find $b^{-1}$.
-This is called the [*discrete logarithm problem*](https://en.wikipedia.org/wiki/Discrete_logarithm).
+Now we need to find $b^{-1}$.
+This is called the [_discrete logarithm problem_](https://en.wikipedia.org/wiki/Discrete_logarithm).
 Because we need to find the exponent $b^{-1}$ such that
 
 $$b^{-1} = \log_b c \mod n.$$
@@ -259,11 +261,11 @@ It is used to create public and private keys for asymmetric cryptography.
 
 This post is licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International][cc-by-nc-sa].
 
-[![CC BY-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
 
 [cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
 
 [^duality]: This is also why transaction malleability was a problem before Segwit in Bitcoin.
 [^infinity]: If the line is vertical or tangent to the curve,
-             then it intersects the curve in a point at infinity.
+then it intersects the curve in a point at infinity.
