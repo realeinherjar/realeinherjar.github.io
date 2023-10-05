@@ -1,5 +1,10 @@
 [devshell]
-packages = ["hugo"]
+packages = ["hugo", "ltex-ls", "dprint"]
+
+[[commands]]
+name = "dprint_init"
+help = "instantiate dprint"
+command = "dprint init"
 
 [[commands]]
 name = "serve"
