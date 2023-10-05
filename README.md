@@ -12,6 +12,49 @@ However, it doesn't break the user experience if JavaScript is disabled.
 The site is currently hosted by [GitHub Pages](https://pages.github.com/).
 Deployment is done through a [GitHub Action workflow](https://github.com/realeinherjar/realeinherjar.github.io/tree/main/.github/workflows).
 
+## JavaScript
+
+By default, all JavaScript[^javascript] is disabled.
+You can enable them in posts by setting the YAML front matter with:
+
+```yaml
+javascript: true
+```
+
+## Math Support
+
+Math support can be enabled by setting the YAML front matter with:
+
+```yaml
+math: true
+```
+
+This will load [KaTeX](https://katex.org/) under the hood,
+and anything between `$` and `$$` will be rendered as inline or equation math
+using JavaScript.
+
+Check all the supported functions in [KaTeX documentation](https://katex.org/docs/supported).
+
+## Mermaid Support
+
+[MermaidJS](https://mermaid.js.org/) support can be enabled by setting the YAML front matter with:
+
+```yaml
+mermaid: true
+```
+
+This will load MermaidJS under the hood,
+and you can specify diagrams and charts with the shortcode:
+
+```md
+{{<mermaid>}}
+flowchart LR
+  a --> b & c --> d
+{{</mermaid>}}
+```
+
+They will be rendered automatically using JavaScript.
+
 ## License
 
 The code is [MIT](https://mit-license.org/)
@@ -22,3 +65,8 @@ and the content is [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 In
 [cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
+
+[^javascript]: JavaScript is a bloated shitcoin and a security issue.
+JavaScript enables **remote code execution**.
+The browser is millions of lines of code, nobody truly knows what is going on,
+and often has escalated privileges in your computer.
