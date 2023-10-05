@@ -221,8 +221,8 @@ You can try brute force, but that&rsquo;s not efficient.</p>
 <h5 id="why-the-discrete-logarithm-problem-is-hard-as-fuck">Why the Discrete Logarithm Problem is Hard as Fuck</h5>
 <p>To get a feeling why the discrete logarithm problem is difficult,
 let&rsquo;s add one more concept to our bag of knowledge.
-Every finite field has <strong><em>generators</em></strong>,
-also known as <strong>_primitive roots</strong>_,
+Every finite field has <em><strong>generators</strong></em>,
+also known as <em><strong>primitive roots</strong></em>,
 which is also a member of the group,
 such that applying multiplication to this one single element
 makes possible to generate the whole finite field.</p>
@@ -302,7 +302,7 @@ As you&rsquo;ve guessed right this is the $\mathbb{Z}_7$ finite field.</p>
 </table>
 <p>You see that something interesting is happening here.
 For specific values of $b$, such as $b = 3$, and $b = 5$, we are able to <strong>generate the whole finite field</strong>.
-Hence, say that $3$ and $5$ are <strong><em>generators</em></strong> or <strong><em>primitive roots</em></strong> of $\mathbb{Z}_7$.</p>
+Hence, say that $3$ and $5$ are <em><strong>generators</strong></em> or <em><strong>primitive roots</strong></em> of $\mathbb{Z}_7$.</p>
 <p>Now suppose I ask you to find $x$ in the following equation</p>
 <p>$$3^x \mod p = 11$$</p>
 <p>where $p$ is a very large prime number.
