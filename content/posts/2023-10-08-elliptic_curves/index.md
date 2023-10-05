@@ -82,12 +82,23 @@ The first one is when $P = P^\prime$.
 {{< figure src="ec_point_tangent.png" title="Adding a Point to Itself in an Elliptic Curve" >}}
 
 Then we have a tangent line.
+In this case we take derivatives on both sides:
+
+$$\begin{aligned}
+y^2 &= x^3 + ax + b \\\
+2y \frac{dy}{dx} &= 3x^2 + a \\\
+\frac{dy}{dx} &= \frac{3x^2 + a}{2y}
+\end{aligned}$$
+
+Hence, $2*P = (x, y)$ where $x = \left( \frac{3x^2 + a}{2y} \right) - 2x$,
+and $y = \left( \frac{3x^2 + a}{2y} \right) (x - x) - y$.
+
 The other is when $P^\prime$ is the reflection of $P$ with respect to the $x$-axis.
-Then we have a vertical line.
 
 {{< figure src="ec_point_vertical.png" title="Adding a Point to Its Reflection in an Elliptic Curve" >}}
 
-In both cases we define $P + P^\prime = \mathcal{O}$,
+Then we have a vertical line.
+In this case we define $P + P^\prime = \mathcal{O}$,
 where $\mathcal{O}$ is the **point at infinity**.
 
 ### Point Addition Properties
@@ -243,19 +254,92 @@ Then we can write division as
 $$a = c \div b = c \times b^{-1} \mod n.$$
 
 Now we need to find $b^{-1}$.
-This is called the [_discrete logarithm problem_](https://en.wikipedia.org/wiki/Discrete_logarithm).
+This is called the [**_discrete logarithm problem_**](https://en.wikipedia.org/wiki/Discrete_logarithm).
 Because we need to find the exponent $b^{-1}$ such that
 
 $$b^{-1} = \log_b c \mod n.$$
 
+Since this number is a discrete number and not a real number,
+that's why it's called the discrete logarithm problem.
+
 Good luck my friend, no efficient method is known for computing them in general.
 You can try brute force, but that's not efficient.
+
+##### Why the Discrete Logarithm Problem is Hard as Fuck
+
+To get a feeling why the discrete logarithm problem is difficult,
+let's add one more concept to our bag of knowledge.
+Every finite field has **_generators_**,
+also known as **_primitive roots**_,
+which is also a member of the group,
+such that applying multiplication to this one single element
+makes possible to generate the whole finite field.
+
+Let's illustrate this with an example.
+Below we have a table of all the results of the following operation
+
+$$b^x \mod 7$$
+
+for every possible value of $x$.
+As you've guessed right this is the $\mathbb{Z}_7$ finite field.
+
+| $b$ | $b^1 \mod 7$ | $b^2 \mod 7$ | $b^3 \mod 7$ | $b^4 \mod 7$ | $b^5 \mod 7$ | $b^6 \mod 7$ |
+| :-: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
+| $1$ |     $1$      |     $1$      |     $1$      |     $1$      |     $1$      |     $1$      |
+| $2$ |     $2$      |     $4$      |     $1$      |     $2$      |     $4$      |     $1$      |
+| $3$ |     $3$      |     $2$      |     $6$      |     $4$      |     $5$      |     $1$      |
+| $4$ |     $4$      |     $2$      |     $1$      |     $4$      |     $2$      |     $1$      |
+| $5$ |     $5$      |     $4$      |     $6$      |     $2$      |     $3$      |     $1$      |
+| $6$ |     $6$      |     $1$      |     $6$      |     $1$      |     $1$      |     $1$      |
+
+You see that something interesting is happening here.
+For specific values of $b$, such as $b = 3$, and $b = 5$, we are able to **generate the whole finite field**.
+Hence, say that $3$ and $5$ are **_generators_** or **_primitive roots_** of $\mathbb{Z}_7$.
+
+Now suppose I ask you to find $x$ in the following equation
+
+$$3^x \mod p = 11$$
+
+where $p$ is a very large prime number.
+Then you don't have any other option than brute forcing it.
+**You'll need to try each exponent $x$ until you find the one that satisfies the equation**.
+
+Notice that this operation is very asymmetric.
+It is very easy to compute $3^x \mod p$ for any $x$,
+but it is very hard to find $x$ given $3^x \mod p$.
 
 ## Bringing it All Together
 
 Now we are ready to talk about elliptic curve cryptography.
-Elliptic curve cryptography is a public-key encryption technique based on elliptic curves.
+**Elliptic curve cryptography is a public-key encryption technique based on elliptic curves**.
 It is used to create public and private keys for asymmetric cryptography.
+
+Your **private key is a random number $k$**.
+Your **public key is the point $kG$ in the elliptic curve**,
+where $G$ is a point and a generator of the elliptic curve.
+We know that $kG$ is a point in the elliptic curve,
+because elliptic curves are Abelian groups,
+having the closure property,
+then
+
+$$kG = \underbrace{G + G + \cdots + G}_{k \text{ times}}$$
+
+is also a point in the elliptic curve.
+
+Now here comes the grand finale.
+Since elliptic curves are finite fields,
+then we can use the discrete logarithm problem to our advantage.
+**It is very easy to compute $kG$ given $k$ and $G$**.
+But it is **hard as fuck to find $k$ given $kG$ and $G$**.
+
+## The `secp256k1` Elliptic Curve
+
+Let's talk about some facts[^seg] about our muse `secp256k1` elliptic curve:
+
+- **Equation**: $y^2 = x^3 + 7$
+- **$\mathbb{F}_p$ where $p$**: $2^{256} - 2^{32} - 2^9 - 2^8 - 2^7 - 2^6 - 2^4 - 1$ (yes, it is a prime number)
+- **Order $n$**: this is the number of possible points in the curve[^howtofind], 0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141[^bignumber]
+- **Generator Point $G$**: (0x79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798, 0x483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8)[^bignumber]
 
 ## License
 
@@ -269,3 +353,7 @@ This post is licensed under [Creative Commons Attribution-NonCommercial-ShareAli
 [^duality]: This is also why transaction malleability was a problem before Segwit in Bitcoin.
 [^infinity]: If the line is vertical or tangent to the curve,
 then it intersects the curve in a point at infinity.
+[^seg]: These are standard and defined in the [Standards for Efficient Cryptography Group](https://www.secg.org/)
+in their [SEC 2 specification](https://www.secg.org/sec2-v2.pdf).
+[^howtofind]: To find the order of an elliptic curve, you can use [Schoof's algorithm](https://en.wikipedia.org/wiki/Schoof%27s_algorithm#The_algorithm).
+[^bignumber]: It is a fucking big number, so I am putting the values in hexadecimal representation.
