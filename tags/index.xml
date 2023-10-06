@@ -6,6 +6,47 @@
     <description>Recent content in Tags on Einherjar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright><atom:link href="https://realeinherjar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+    <lastBuildDate>Sun, 01 Oct 2023 16:08:15 -0300</lastBuildDate><atom:link href="https://realeinherjar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bitcoin</title>
+      <link>https://realeinherjar.github.io/tags/bitcoin/</link>
+      <pubDate>Sun, 01 Oct 2023 16:08:15 -0300</pubDate>
+      
+      <guid>https://realeinherjar.github.io/tags/bitcoin/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>cryptography</title>
+      <link>https://realeinherjar.github.io/tags/cryptography/</link>
+      <pubDate>Sun, 01 Oct 2023 16:08:15 -0300</pubDate>
+      
+      <guid>https://realeinherjar.github.io/tags/cryptography/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>taproot</title>
+      <link>https://realeinherjar.github.io/tags/taproot/</link>
+      <pubDate>Sat, 02 Sep 2023 12:10:10 -0300</pubDate>
+      
+      <guid>https://realeinherjar.github.io/tags/taproot/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>opinion</title>
+      <link>https://realeinherjar.github.io/tags/opinion/</link>
+      <pubDate>Sat, 19 Aug 2023 18:07:18 +0000</pubDate>
+      
+      <guid>https://realeinherjar.github.io/tags/opinion/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
   </channel>
 </rss>
