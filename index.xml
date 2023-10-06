@@ -152,9 +152,10 @@ For example, addition is <strong>commutative</strong> and <strong>associative</s
 <p>Also, there are two special elements in the field,
 called the <strong>additive identity</strong> $-a$ and the <strong>multiplicative identity</strong> $a^{-1}$,
 such that</p>
-<p>$$a + (-a) = a,$$</p>
+<p>$$a + (-a) = I,$$</p>
 <p>and</p>
-<p>$$a \times a^{-1} = a.$$</p>
+<p>$$a \times a^{-1} = I,$$</p>
+<p>where $I$ is the identity element.</p>
 <p>Note that this allows us to define <strong>subtraction</strong></p>
 <p>$$a - b = a + (-b),$$</p>
 <p>and <strong>division</strong></p>
