@@ -1,6 +1,8 @@
 ---
 title: "What the hell is an Elliptic Curve?"
 date: 2023-10-01T16:08:15-03:00
+tags: ["cryptography", "bitcoin"]
+categories: ["Bitcoin Basics"]
 javascript: true
 math: true
 mermaid: false

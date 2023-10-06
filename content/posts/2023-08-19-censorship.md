@@ -1,6 +1,8 @@
 ---
 title: "On Censorship"
 date: 2023-08-19T18:07:18
+tags: ["opinion"]
+categories: []
 javascript: false
 math: false
 mermaid: false

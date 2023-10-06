@@ -107,7 +107,11 @@ menu:
       name: Blog
       url: posts/
       weight: 10
+    - identifier: bitcoin-basics
+      name: Bitcoin Basics
+      url: categories/bitcoin-basics
+      weight: 15
     - identifier: search
       name: Search
       url: search/
-      weight: 10
+      weight: 20
