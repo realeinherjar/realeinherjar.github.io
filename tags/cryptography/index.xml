@@ -439,30 +439,31 @@ You are just transferring the trust from your ISP
 to your VPN service provider.</p>
 <p>But they are useful, specifically for:</p>
 <ol>
-<li>You need to have a specif geo-located ip address.</li>
+<li>You need to have a specific geolocated IP address.</li>
 <li>You need to hide some stuff from your ISP
 (this is most important if you are a person of interest in
 a f*****-up country).</li>
-<li>You need to increase your anonimity set,
+<li>You need to increase your anonymity set,
 i.e. have a plausible deniability that you might or might not be someone.
 This is recommended when downloading and seeding torrents.</li>
 </ol>
 <p>Suggestions:</p>
 <ul>
-<li>If you want a <strong>simple solution</strong> just use <a href="https://mullvad.net/en/">mullvad</a>.
+<li>If you want a <strong>simple solution</strong> just use <a href="https://mullvad.net/en/">Mullvad</a>.
 They are a notorious private VPN service that claims to do no logging and
 also no personal information.
-Buy a subscription using cryptocurrency with ofuscation techniques,
-such as monero or coinjoined bitcoin.</li>
-<li>If you want to <strong>do it yourself</strong> see this <a href="https://www.youtube.com/watch?v=szGsh5J9bzY">video guide by mentaloutlaw</a>.
+Also, Mullvad is located in Sweden which has very good privacy-respecting laws.
+Buy a subscription using cryptocurrency with obfuscation techniques,
+such as Monero or coinjoined Bitcoin.</li>
+<li>If you want to <strong>do it yourself</strong> see this <a href="https://www.youtube.com/watch?v=szGsh5J9bzY">video guide by mental outlaw</a>.
 It teaches you how to make your own VPN with OpenBSD
-(a <strong>VERY</strong> secure unix-based OS) and WireGuard.
+(a <strong>VERY</strong> secure Unix-based OS) and WireGuard.
 For the VPS hosting, use either <a href="https://1984.hosting/">1984</a>
 or <a href="https://www.orangewebsite.com/">orange</a>.
 Both are located in Iceland which has very good privacy-respecting laws.</li>
-<li>You can also just use <a href="https://www.torproject.org/"><strong>Tor</strong></a> to ofuscate you traffic.</li>
+<li>You can also just use <a href="https://www.torproject.org/"><strong>Tor</strong></a> to obfuscate you traffic.</li>
 </ul>
-<p>If you need to use a VPN but somehow either ofuscate even further
+<p>If you need to use a VPN but somehow either obfuscate even further
 or bypass some restriction or firewall block,
 use <a href="https://shadowsocks.org/">Shadowsocks</a>.</p>
 <h2 id="browser-extensions">Browser Extensions</h2>
@@ -471,7 +472,7 @@ That pretty much means a privacy and security nightmare.
 So you need to have sane defaults.
 The idea here is to block everything (<em>opt-out</em>) by default and whitelist (<em>opt-in</em>) as necessary.</p>
 <p><a href="https://github.com/gorhill/uBlock">uBlock Origin</a>, the only one you need!
-I recommend to use the <a href="https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode">Hard Mode</a>,
+I recommend using the <a href="https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode">Hard Mode</a>,
 with <a href="https://github.com/gorhill/uBlock/wiki/Per-site-switches#no-scripting">disabled JavaScript</a>
 and whitelist sites as necessary.</p>
 <h2 id="email-aliasing">Email Aliasing</h2>
@@ -485,7 +486,7 @@ The author of this fork also provides a <a href="https://github.com/timvisee/ffs
 <p>Many <a href="https://github.com/timvisee/send-instances">instances</a> are available, with different characteristics,
 such as more storage or longer available time.</p>
 <h2 id="backups">Backups</h2>
-<p>It is important to back-up your data.
+<p>It is important to backup your data.
 First, a note about <strong>cloud solutions</strong>.
 <strong>Stay away!</strong>
 Most cloud solutions will scan your data or keep copies of your data for years after deletion.
@@ -500,7 +501,7 @@ Or you can use automated open source tools
 (that might not be widely-available, i.e. you would need to install manually)
 such as <a href="https://github.com/brainfucksec/rbackup"><code>rbackup</code></a>.
 <code>rbackup</code> is a simple
-(with an easy to read codebase)
+(with an easy-to-read codebase)
 shell script for making backup of your Linux system with <code>rsync</code>.
 Uses <code>tar</code> and <code>gzip</code> for compression and GnuPG for encryption.</p>
 <h2 id="alternative-frontends">Alternative Frontends</h2>
@@ -511,9 +512,11 @@ Uses <code>tar</code> and <code>gzip</code> for compression and GnuPG for encryp
 <a href="https://codeberg.org/orenom/wikiless">Wikiless</a>,
 <a href="https://sr.ht/~cadence/bibliogram/">Bibliogram</a>,
 and <a href="https://proxitok.herokuapp.com/">ProxiTok</a>.
-Use them whenever possible for a privacy-oriented comsumption of those services.</p>
+Use them whenever possible for a privacy-oriented consumption of those services.</p>
 <p><a href="https://sr.ht/~benbusby/farside/">Farside</a> is redirecting service for FOSS alternative frontends.</p>
-<p>Farside provides links that automatically redirect to working instances of privacy-oriented alternative frontends, such as Nitter, Libreddit, etc. This allows for users to have more reliable access to the available public instances for a particular service, while also helping to distribute traffic more evenly across all instances and avoid performance bottlenecks and rate-limiting.</p>
+<p>Farside provides links that automatically redirect to working instances of privacy-oriented alternative frontends, such as Nitter, Libreddit, etc.
+This allows for users to have more reliable access to the available public instances for a particular service,
+while also helping to distribute traffic more evenly across all instances and avoid performance bottlenecks and rate-limiting.</p>
 <p>Farside&rsquo;s links work with the following structure: <code>farside.link/&lt;service&gt;/&lt;path&gt;</code>.
 Examples:</p>
 <ul>
@@ -608,7 +611,7 @@ Your precious cryptocurrencies could be in danger.</p>
 <p>Hardware wallets are dedicated hardware to hold,
 with tons of security features,
 your private keys.
-So, if you device is compromised,
+So, if your device is compromised,
 your keys are probably safe from danger.
 Or at least, way safer than if it were a software wallet.</p>
 <blockquote>
