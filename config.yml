@@ -107,6 +107,10 @@ menu:
       name: Blog
       url: posts/
       weight: 10
+    - identifier: privacy-basics
+      name: Privacy Basics
+      url: privacy/
+      weight: 14
     - identifier: bitcoin-basics
       name: Bitcoin Basics
       url: categories/bitcoin-basics
