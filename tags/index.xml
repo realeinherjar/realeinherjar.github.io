@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Sun, 01 Oct 2023 16:08:15 -0300</lastBuildDate><atom:link href="https://realeinherjar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Oct 2023 09:29:09 -0300</lastBuildDate><atom:link href="https://realeinherjar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bitcoin</title>
       <link>https://realeinherjar.github.io/tags/bitcoin/</link>
-      <pubDate>Sun, 01 Oct 2023 16:08:15 -0300</pubDate>
+      <pubDate>Sat, 07 Oct 2023 09:29:09 -0300</pubDate>
       
       <guid>https://realeinherjar.github.io/tags/bitcoin/</guid>
       <description></description>
@@ -21,9 +21,29 @@
     <item>
       <title>cryptography</title>
       <link>https://realeinherjar.github.io/tags/cryptography/</link>
-      <pubDate>Sun, 01 Oct 2023 16:08:15 -0300</pubDate>
+      <pubDate>Sat, 07 Oct 2023 09:29:09 -0300</pubDate>
       
       <guid>https://realeinherjar.github.io/tags/cryptography/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>cypherpunk</title>
+      <link>https://realeinherjar.github.io/tags/cypherpunk/</link>
+      <pubDate>Sat, 07 Oct 2023 09:29:09 -0300</pubDate>
+      
+      <guid>https://realeinherjar.github.io/tags/cypherpunk/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>privacy</title>
+      <link>https://realeinherjar.github.io/tags/privacy/</link>
+      <pubDate>Sat, 07 Oct 2023 09:29:09 -0300</pubDate>
+      
+      <guid>https://realeinherjar.github.io/tags/privacy/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
