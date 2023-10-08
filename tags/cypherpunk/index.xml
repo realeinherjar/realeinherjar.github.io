@@ -268,7 +268,7 @@ try <a href="https://github.com/LukeSmithxyz/emailwiz"><code>LukeSmithxyz/emailw
 You can also try GUI interfaces like <a href="https://www.thunderbird.net">Thunderbird</a>,
 or the fine-tuned fork <a href="https://www.betterbird.eu/">Betterbird</a>.</li>
 <li>Conferencing: <a href="https://jami.net/">Jami</a> and <a href="https://meet.jit.si/">Jitsi</a>.</li>
-<li>Text Editing: <a href="https://helix-editor.com/">Helix</a>/<a href="https://neovim.io/">NeoVim</a>/<a href="https://vim.org">Vim</a>/<a href="https://github.com/VSCodium/vscodium">VSCodium</a>
+<li>Text Editing: <a href="https://helix-editor.com/">Helix</a>/<a href="https://neovim.io/">NeoVim</a>/<a href="https://www.vim.org">Vim</a>/<a href="https://github.com/VSCodium/vscodium">VSCodium</a>
 for Markdown, text and LaTeX,
 <a href="https://www.libreoffice.org/">LibreOffice</a> and <a href="https://pandoc.org/">Pandoc</a>.</li>
 <li>PDF Documents: <a href="https://pwmt.org/projects/zathura/">Zathura</a>.
@@ -410,11 +410,9 @@ and <a href="https://f-droid.org/packages/chat.simplex.app/">SimpleX</a>.</li>
 <li>Removing EXIF and compressing Images with <a href="https://f-droid.org/packages/de.kaffeemitkoffein.imagepipe">ImagePipe</a>,
 <a href="https://guardianproject.info/apps/obscuracam/">ObscuraCam</a>
 or <a href="https://f-droid.org/packages/com.jarsilio.android.scrambledeggsif/">Scrambled Exif</a>.</li>
-<li><a href="https://f-droid.org/packages/de.grobox.liberario/">Public Transportation with Transportr</a>.</li>
 <li><a href="https://f-droid.org/packages/cz.martykan.forecastie/">Weather with Forecastie</a>.</li>
 <li><a href="https://f-droid.org/packages/cx.ring/">Online Meetings with Jami</a>.</li>
 <li><a href="https://f-droid.org/packages/com.foobnix.pro.pdf.reader/">PDF and ebooks with Librera Reader</a>.</li>
-<li><a href="https://f-droid.org/packages/eu.kanade.tachiyomi">Anime and Manga with Tachiyomi</a>.</li>
 <li>Torrents and General downloads with <a href="https://f-droid.org/packages/com.gianlu.aria2app/">Aria2App</a>
 <a href="https://f-droid.org/packages/org.proninyaroslav.libretorrent/">LibreTorrent</a>.</li>
 <li><a href="https://f-droid.org/packages/de.qwerty287.ftpclient/">FTPClient</a>.</li>
@@ -506,12 +504,12 @@ shell script for making backup of your Linux system with <code>rsync</code>.
 Uses <code>tar</code> and <code>gzip</code> for compression and GnuPG for encryption.</p>
 <h2 id="alternative-frontends">Alternative Frontends</h2>
 <p>There are several FOSS alternative frontends such as
-<a href="https://nitter.net/">Nitter</a>,
-<a href="https://libreddit.spike.codes/">Libreddit</a>,
+<a href="https://github.com/zedeus/nitter">Nitter</a>,
+<a href="https://github.com/libreddit/libreddit">Libreddit</a>,
 <a href="https://invidious.io/">Invidious</a>,
-<a href="https://codeberg.org/orenom/wikiless">Wikiless</a>,
+<a href="https://github.com/Metastem/wikiless">Wikiless</a>,
 <a href="https://sr.ht/~cadence/bibliogram/">Bibliogram</a>,
-and <a href="https://proxitok.herokuapp.com/">ProxiTok</a>.
+and <a href="https://github.com/pablouser1/ProxiTok">ProxiTok</a>.
 Use them whenever possible for a privacy-oriented consumption of those services.</p>
 <p><a href="https://sr.ht/~benbusby/farside/">Farside</a> is redirecting service for FOSS alternative frontends.</p>
 <p>Farside provides links that automatically redirect to working instances of privacy-oriented alternative frontends, such as Nitter, Libreddit, etc.
