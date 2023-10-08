@@ -255,7 +255,7 @@ Here are some of my suggestions for you to migrate your proprietary tools to ope
   You can also try GUI interfaces like [Thunderbird](https://www.thunderbird.net),
   or the fine-tuned fork [Betterbird](https://www.betterbird.eu/).
 - Conferencing: [Jami](https://jami.net/) and [Jitsi](https://meet.jit.si/).
-- Text Editing: [Helix](https://helix-editor.com/)/[NeoVim](https://neovim.io/)/[Vim](https://vim.org)/[VSCodium](https://github.com/VSCodium/vscodium)
+- Text Editing: [Helix](https://helix-editor.com/)/[NeoVim](https://neovim.io/)/[Vim](https://www.vim.org)/[VSCodium](https://github.com/VSCodium/vscodium)
   for Markdown, text and LaTeX,
   [LibreOffice](https://www.libreoffice.org/) and [Pandoc](https://pandoc.org/).
 - PDF Documents: [Zathura](https://pwmt.org/projects/zathura/).
@@ -399,11 +399,9 @@ The vital apps to have:
 1. Removing EXIF and compressing Images with [ImagePipe](https://f-droid.org/packages/de.kaffeemitkoffein.imagepipe),
    [ObscuraCam](https://guardianproject.info/apps/obscuracam/)
    or [Scrambled Exif](https://f-droid.org/packages/com.jarsilio.android.scrambledeggsif/).
-1. [Public Transportation with Transportr](https://f-droid.org/packages/de.grobox.liberario/).
 1. [Weather with Forecastie](https://f-droid.org/packages/cz.martykan.forecastie/).
 1. [Online Meetings with Jami](https://f-droid.org/packages/cx.ring/).
 1. [PDF and ebooks with Librera Reader](https://f-droid.org/packages/com.foobnix.pro.pdf.reader/).
-1. [Anime and Manga with Tachiyomi](https://f-droid.org/packages/eu.kanade.tachiyomi).
 1. Torrents and General downloads with [Aria2App](https://f-droid.org/packages/com.gianlu.aria2app/)
    [LibreTorrent](https://f-droid.org/packages/org.proninyaroslav.libretorrent/).
 1. [FTPClient](https://f-droid.org/packages/de.qwerty287.ftpclient/).
@@ -509,12 +507,12 @@ Uses `tar` and `gzip` for compression and GnuPG for encryption.
 ## Alternative Frontends
 
 There are several FOSS alternative frontends such as
-[Nitter](https://nitter.net/),
-[Libreddit](https://libreddit.spike.codes/),
+[Nitter](https://github.com/zedeus/nitter),
+[Libreddit](https://github.com/libreddit/libreddit),
 [Invidious](https://invidious.io/),
-[Wikiless](https://codeberg.org/orenom/wikiless),
+[Wikiless](https://github.com/Metastem/wikiless),
 [Bibliogram](https://sr.ht/~cadence/bibliogram/),
-and [ProxiTok](https://proxitok.herokuapp.com/).
+and [ProxiTok](https://github.com/pablouser1/ProxiTok).
 Use them whenever possible for a privacy-oriented consumption of those services.
 
 [Farside](https://sr.ht/~benbusby/farside/) is redirecting service for FOSS alternative frontends.
