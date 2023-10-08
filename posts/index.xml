@@ -278,6 +278,7 @@ and <a href="https://wiki.gnome.org/Apps/Evince">Evince</a> (which comes by defa
 <li>Ebooks: <a href="https://calibre-ebook.com/">Calibre</a> and
 <a href="https://johnfactotum.github.io/foliate/">Foliate</a>.</li>
 <li>Web Browser: <a href="https://github.com/arkenfox/user.js">hardened Firefox</a>,
+<a href="https://mullvad.net/browser">Mullvad Browser</a>,
 and <a href="https://github.com/ungoogled-software/ungoogled-chromium">ungoogled-chromium</a> if you need a Chromium-based browser.
 You can get it using <a href="https://flatpak.org/">flatpak</a> in <a href="https://flathub.org/apps/details/com.github.Eloston.UngoogledChromium">flathub</a>.</li>
 <li>Search: <a href="https://searx.space/">searX</a>.
