@@ -266,6 +266,7 @@ Here are some of my suggestions for you to migrate your proprietary tools to ope
 - Ebooks: [Calibre](https://calibre-ebook.com/) and
   [Foliate](https://johnfactotum.github.io/foliate/).
 - Web Browser: [hardened Firefox](https://github.com/arkenfox/user.js),
+  [Mullvad Browser](https://mullvad.net/browser),
   and [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium) if you need a Chromium-based browser.
   You can get it using [flatpak](https://flatpak.org/) in [flathub](https://flathub.org/apps/details/com.github.Eloston.UngoogledChromium).
 - Search: [searX](https://searx.space/).
