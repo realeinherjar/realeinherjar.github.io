@@ -203,18 +203,19 @@ For example, in $\mathbb{Z}_3$,</p>
 <p>Exponentiation in finite fields can be written as multiple multiplications.
 For example, in $\mathbb{Z}_3$,</p>
 <p>$$2^2 = 2 \times 2 = 4 \mod 3 = 1.$$</p>
-<p>This is very trivial for any finite field.
-However, for division we are pretty much screwed.
+<p>As you can see addition, subtraction, and multiplication becomes linear operations.
+This is very trivial for any finite field.</p>
+<p>However, for division we are pretty much screwed.
 It is really hard to find the multiplicative inverse of an element in a finite field.
-For example, suppose that we have numbers $a,b$ in a very large finite field $\mathbb{Z}_n$,
+For example, suppose that we have numbers $a,b$ in a very large finite field $\mathbb{Z}_p$,
 such that</p>
-<p>$$c = a \times b \mod n.$$</p>
+<p>$$c = a \times b \mod p.$$</p>
 <p>Then we can write division as</p>
-<p>$$a = c \div b = c \times b^{-1} \mod n.$$</p>
-<p>Now we need to find $b^{-1}$.
+<p>$$a = c \div b = c \times b^{-1} \mod p.$$</p>
+<p>Now we need to find $b^{-1}$, which is the multiplicative inverse of $b$.
 This is called the <a href="https://en.wikipedia.org/wiki/Discrete_logarithm"><strong><em>discrete logarithm problem</em></strong></a>.
-Because we need to find the exponent $b^{-1}$ such that</p>
-<p>$$b^{-1} = \log_b c \mod n.$$</p>
+Because we need to find $b^{-1}$ such that</p>
+<p>$$b^{-1} = \log_b c \mod p.$$</p>
 <p>Since this number is a discrete number and not a real number,
 that&rsquo;s why it&rsquo;s called the discrete logarithm problem.</p>
 <p>Good luck my friend, no efficient method is known for computing them in general.
@@ -308,7 +309,7 @@ Hence, say that $3$ and $5$ are <em><strong>generators</strong></em> or <em><str
 <p>$$3^x \mod p = 11$$</p>
 <p>where $p$ is a very large prime number.
 Then you don&rsquo;t have any other option than brute forcing it.
-<strong>You&rsquo;ll need to try each exponent $x$ until you find the one that satisfies the equation</strong>.</p>
+<strong>You&rsquo;ll need to try each exponent $x \in \mathbb{Z}_p$ until you find the one that satisfies the equation</strong>.</p>
 <p>Notice that this operation is very asymmetric.
 It is very easy to compute $3^x \mod p$ for any $x$,
 but it is very hard to find $x$ given $3^x \mod p$.</p>
