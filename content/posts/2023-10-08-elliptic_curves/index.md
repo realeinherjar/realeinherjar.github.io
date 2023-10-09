@@ -244,23 +244,25 @@ For example, in $\mathbb{Z}_3$,
 
 $$2^2 = 2 \times 2 = 4 \mod 3 = 1.$$
 
+As you can see addition, subtraction, and multiplication becomes linear operations.
 This is very trivial for any finite field.
+
 However, for division we are pretty much screwed.
 It is really hard to find the multiplicative inverse of an element in a finite field.
-For example, suppose that we have numbers $a,b$ in a very large finite field $\mathbb{Z}_n$,
+For example, suppose that we have numbers $a,b$ in a very large finite field $\mathbb{Z}_p$,
 such that
 
-$$c = a \times b \mod n.$$
+$$c = a \times b \mod p.$$
 
 Then we can write division as
 
-$$a = c \div b = c \times b^{-1} \mod n.$$
+$$a = c \div b = c \times b^{-1} \mod p.$$
 
-Now we need to find $b^{-1}$.
+Now we need to find $b^{-1}$, which is the multiplicative inverse of $b$.
 This is called the [**_discrete logarithm problem_**](https://en.wikipedia.org/wiki/Discrete_logarithm).
-Because we need to find the exponent $b^{-1}$ such that
+Because we need to find $b^{-1}$ such that
 
-$$b^{-1} = \log_b c \mod n.$$
+$$b^{-1} = \log_b c \mod p.$$
 
 Since this number is a discrete number and not a real number,
 that's why it's called the discrete logarithm problem.
@@ -305,7 +307,7 @@ $$3^x \mod p = 11$$
 
 where $p$ is a very large prime number.
 Then you don't have any other option than brute forcing it.
-**You'll need to try each exponent $x$ until you find the one that satisfies the equation**.
+**You'll need to try each exponent $x \in \mathbb{Z}_p$ until you find the one that satisfies the equation**.
 
 Notice that this operation is very asymmetric.
 It is very easy to compute $3^x \mod p$ for any $x$,
