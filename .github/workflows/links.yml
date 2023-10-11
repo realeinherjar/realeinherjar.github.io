@@ -1,25 +1,17 @@
-name: Links
-
+name: Markdown Links Check
+# runs every monday at 9 am
 on:
-  repository_dispatch:
-  workflow_dispatch:
   schedule:
-    - cron: "00 18 * * *"
+    - cron: "0 9 * * 1"
+  workflow_dispatch: null
 
 jobs:
-  linkChecker:
+  check-links:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Link Checker
-        id: lychee
-        uses: lycheeverse/lychee-action@v1
-
-      - name: Create Issue From File
-        if: env.lychee_exit_code != 0
-        uses: peter-evans/create-issue-from-file@v4
+      - uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
-          title: Link Checker Report
-          content-filepath: ./lychee/out.md
-          labels: report, automated issue
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+          config-file: 'mlc_config.json'
