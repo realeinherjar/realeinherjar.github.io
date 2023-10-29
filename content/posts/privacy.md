@@ -712,6 +712,7 @@ Check [kycnot.me](https://kycnot.me/).
 
 Regarding Bitcoin, you can:
 
+1. Coinjoin to enhance your on-chain privacy with [Jam](https://jamapp.org/).
 1. Use a prepaid Visa card with [Moon](https://paywithmoon.com/).
 1. Use a prepaid gift card with [CoinCards](https://coincards.com/).
 1. Swap Bitcoin for cash in [Bitcoins ATM](https://coinatmradar.com/).
