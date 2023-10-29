@@ -158,12 +158,15 @@ Create a file <code>/etc/NetworkManager/conf.d/wifi_rand_mac.conf</code>:</p>
 I recommend <a href="https://github.com/StevenBlack/hosts"><code>StevenBlack/hosts</code></a>.</p>
 </li>
 <li>
-<p><strong>If you need <a href="https://madaidans-insecurities.github.io/vpns.html">VPN</a>, use <a href="https://mullvad.net">mullvad</a>.</strong></p>
+<p><strong>If you need <a href="https://madaidans-insecurities.github.io/vpns.html">VPN</a>,
+use <a href="https://mullvad.net">mullvad</a>,
+or <a href="https://www.ivpn.net">IVPN</a></strong></p>
 </li>
 <li>
 <p><strong>Use a custom <a href="https://www.privacyguides.org/dns/">DNS Resolver</a>.</strong>
 I sometimes use <a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls/">mullvad&rsquo;s adblock DNS over TLS</a>:
-<code>adblock.doh.mullvad.net</code>.
+<code>adblock.doh.mullvad.net</code>;
+or <a href="https://adguard-dns.io/en/public-dns.html">adguard&rsquo;s adblock DNS over TLS</a>: <code>dns.adguard-dns.com</code>.
 You can find the list at <a href="https://github.com/mullvad/dns-blocklists/tree/main/lists"><code>mullvad/dns-blocklists</code></a>.</p>
 </li>
 <li>
@@ -392,7 +395,9 @@ to support Gmail.</li>
 </li>
 <li>Passwords and TOPT with <a href="https://f-droid.org/packages/com.kunzisoft.keepass.libre">KeePassDX</a>.</li>
 <li>GPG Keys with <a href="https://f-droid.org/packages/org.sufficientlysecure.keychain/">OpenKeyChain</a>.</li>
-<li>If you need <a href="https://madaidans-insecurities.github.io/vpns.html">VPN</a> use <a href="https://f-droid.org/packages/net.mullvad.mullvadvpn/">mullvad</a>.</li>
+<li>If you need <a href="https://madaidans-insecurities.github.io/vpns.html">VPN</a>
+use <a href="https://f-droid.org/packages/net.mullvad.mullvadvpn/">mullvad</a>,
+or <a href="https://www.ivpn.net/">IVPN</a>.</li>
 <li><a href="https://f-droid.org/packages/io.simplelogin.android.fdroid/">Email alises with SimpleLogin</a>.</li>
 <li><a href="https://f-droid.org/packages/org.schabi.newpipe/">YouTube with NewPipe</a>.</li>
 <li><a href="https://f-droid.org/packages/com.shabinder.spotiflyer/">Spotify with SpotiFlyer</a>.
@@ -447,12 +452,18 @@ This is recommended when downloading and seeding torrents.</li>
 </ol>
 <p>Suggestions:</p>
 <ul>
-<li>If you want a <strong>simple solution</strong> just use <a href="https://mullvad.net/en/">Mullvad</a>.
-They are a notorious private VPN service that claims to do no logging and
+<li>If you want a <strong>simple solution</strong> just use
+<a href="https://mullvad.net/en/">Mullvad</a>
+or <a href="https://www.ivpn.net/">IVPN</a>.
+They are notorious private VPN services that claims to do no logging and
 also no personal information.
 Also, Mullvad is located in Sweden which has very good privacy-respecting laws.
 Buy a subscription using cryptocurrency with obfuscation techniques,
-such as Monero or coinjoined Bitcoin.</li>
+such as Monero or coinjoined Bitcoin.
+If you need something quick and dirty,
+IVPN offers <a href="https://www.ivpn.net/light/">IVPN Light</a>
+which gives you VPN access for 3 hours, 1 day, 1 week, or 1 month.
+You can pay with lightning.</li>
 <li>If you want to <strong>do it yourself</strong> see this <a href="https://www.youtube.com/watch?v=szGsh5J9bzY">video guide by mental outlaw</a>.
 It teaches you how to make your own VPN with OpenBSD
 (a <strong>VERY</strong> secure Unix-based OS) and WireGuard.
@@ -464,6 +475,81 @@ Both are located in Iceland which has very good privacy-respecting laws.</li>
 <p>If you need to use a VPN but somehow either obfuscate even further
 or bypass some restriction or firewall block,
 use <a href="https://shadowsocks.org/">Shadowsocks</a>.</p>
+<h3 id="vpn-setup">VPN Setup</h3>
+<blockquote>
+<p>Sources: <a href="https://manpages.debian.org/unstable/wireguard-tools/wg-quick.8.en.html">manpage of <code>wg-quick</code></a>,
+<a href="https://mullvad.net/en/help/easy-wireguard-mullvad-setup-linux/">Mullvad WireGuard on Linux terminal</a>
+<a href="https://www.ivpn.net/knowledgebase/linux/linux-autostart-wireguard-in-systemd/">IVPN Autostart WireGuard in systemd</a>,
+and <a href="https://www.ivpn.net/knowledgebase/linux/linux-wireguard-kill-switch/">IVPN WireGuard Kill Switch</a></p>
+</blockquote>
+<p>For the extra paranoid, you can use VPNs without installing their apps.
+You will <a href="https://www.wireguard.com/">WireGuard</a>, which is available in almost all Linux distributions.
+Depending on circumstances, just installing <code>wireguard-tools</code> will suffice
+(where all necessary dependencies will be installed).</p>
+<ol>
+<li>
+<p>Create your configuration in <code>/etc/wireguard/wg0.conf</code>.
+You can also name <code>wg0.conf</code> whatever you want.
+Any free-form string <code>[a-zA-Z0-9_=+.-]{1,15}</code> will work.
+These configs are generally provided by your VPN provider.
+They generally look something like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>Interface<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PrivateKey</span> <span class="o">=</span> <span class="nv">abcdefghijklmnopqrstuvwxyz0123456789</span><span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Address</span> <span class="o">=</span> x.y.z.w/32
+</span></span><span class="line"><span class="cl"><span class="nv">DNS</span> <span class="o">=</span> x.y.z.w
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Peer<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PublicKey</span> <span class="o">=</span> <span class="nv">abcdefghijklmnopqrstuvwxyz0123456789</span><span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Endpoint</span> <span class="o">=</span> sub.wg.domain.tld:9999
+</span></span><span class="line"><span class="cl"><span class="nv">AllowedIPs</span> <span class="o">=</span> 0.0.0.0/0
+</span></span></code></pre></div></li>
+<li>
+<p>Add &ldquo;kill switch&rdquo; configs.
+Add the following two lines to the <code>[Interface]</code> section,
+just before the <code>[Peer]</code> section:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nv">PostUp</span>  <span class="o">=</span> iptables -I OUTPUT ! -o %i -m mark ! --mark <span class="k">$(</span>wg show %i fwmark<span class="k">)</span> -m addrtype ! --dst-type LOCAL -j REJECT <span class="o">&amp;&amp;</span> ip6tables -I OUTPUT ! -o %i -m mark ! --mark <span class="k">$(</span>wg show %i fwmark<span class="k">)</span> -m addrtype ! --dst-type LOCAL -j REJECT
+</span></span><span class="line"><span class="cl"><span class="nv">PreDown</span> <span class="o">=</span> iptables -D OUTPUT ! -o %i -m mark ! --mark <span class="k">$(</span>wg show %i fwmark<span class="k">)</span> -m addrtype ! --dst-type LOCAL -j REJECT <span class="o">&amp;&amp;</span> ip6tables -D OUTPUT ! -o %i -m mark ! --mark <span class="k">$(</span>wg show %i fwmark<span class="k">)</span> -m addrtype ! --dst-type LOCAL -j REJECT
+</span></span></code></pre></div><p>You may get a problem to connect to your local network.
+You can modify the kill switch,
+so it includes an exception for your local network,
+for example <code>! -d 192.168.1.0/24</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nv">PostUp</span>  <span class="o">=</span> iptables -I OUTPUT ! -o %i -m mark ! --mark <span class="k">$(</span>wg show %i fwmark<span class="k">)</span> -m addrtype ! --dst-type LOCAL ! -d 192.168.1.0/24 -j REJECT <span class="o">&amp;&amp;</span> ip6tables -I OUTPUT ! -o %i -m mark ! --mark <span class="k">$(</span>wg show %i fwmark<span class="k">)</span> -m addrtype ! --dst-type LOCAL -j REJECT
+</span></span><span class="line"><span class="cl"><span class="nv">PreDown</span> <span class="o">=</span> iptables -D OUTPUT ! -o %i -m mark ! --mark <span class="k">$(</span>wg show %i fwmark<span class="k">)</span> -m addrtype ! --dst-type LOCAL ! -d 192.168.1.0/24 -j REJECT <span class="o">&amp;&amp;</span> ip6tables -D OUTPUT ! -o %i -m mark ! --mark <span class="k">$(</span>wg show %i fwmark<span class="k">)</span> -m addrtype ! --dst-type LOCAL -j REJECT
+</span></span></code></pre></div></li>
+<li>
+<p>Make sure that you have the correct permissions, so only <code>root</code> can read them:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chown root:root -R /etc/wireguard <span class="o">&amp;&amp;</span> sudo chmod <span class="m">600</span> -R /etc/wireguard
+</span></span></code></pre></div></li>
+<li>
+<p>Start the WireGuard connection with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo wg-quick up wg0
+</span></span><span class="line"><span class="cl"><span class="c1"># to disconnect</span>
+</span></span><span class="line"><span class="cl">sudo wg-quick down wg0
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="autostart-wireguard-in-systemd">Autostart WireGuard in <code>systemd</code></h4>
+<p>If you are using a Linux distribution that comes with <code>systemd</code>,
+you can autostart a WireGuard connection with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> wg-quick@wg0.service
+</span></span><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span><span class="line"><span class="cl">sudo systemctl start wg-quick@wg0
+</span></span></code></pre></div><p>To check status: <code>sudo systemctl status wg-quick@wg0</code></p>
+<p>To remove the service and clean up the system:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl stop wg-quick@wg0
+</span></span><span class="line"><span class="cl">sudo systemctl disable wg-quick@wg0.service
+</span></span><span class="line"><span class="cl">sudo rm -i /etc/systemd/system/wg-quick@wg0*
+</span></span><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span><span class="line"><span class="cl">sudo systemctl reset-failed
+</span></span></code></pre></div><h4 id="testing-the-kill-switch">Testing the Kill Switch</h4>
+<p>One way to test a down tunnel is to delete the IP address from the WireGuard network interface,
+like this via the Terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ip a del <span class="o">[</span>IP address<span class="o">]</span> dev <span class="o">[</span>interface<span class="o">]</span>
+</span></span></code></pre></div><p>In this example, it’s possible to remove <code>x.y.z.w</code> from the <code>wg0</code> interface:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ip a del x.y.z.w/32 dev wg0
+</span></span></code></pre></div><p>The <code>PostUP</code> iptables rule from above restricts all traffic to the tunnel,
+and all outgoing attempts to get traffic out fail.
+To gracefully recover from this,
+you will likely have to use the <code>wg-quick</code> command to take the connection down,
+then bring it back up.</p>
 <h2 id="browser-extensions">Browser Extensions</h2>
 <p>Remember that the browser is pretty much a <strong><em>glorified</em> remote code execution machine</strong>.
 That pretty much means a privacy and security nightmare.
