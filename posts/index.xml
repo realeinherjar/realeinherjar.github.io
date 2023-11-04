@@ -406,7 +406,8 @@ There&rsquo;s an open source frontend for Spotify called <a href="https://f-droi
 There&rsquo;s an open source frontend for YouTube Music called <a href="https://f-droid.org/packages/it.vfsfitvnm.vimusic/">ViMusic</a>.</li>
 <li>Videos with <a href="https://f-droid.org/packages/org.videolan.vlc/">VLC</a> or <a href="https://f-droid.org/packages/is.xyz.mpv/">mpv</a>.</li>
 <li><a href="https://f-droid.org/packages/com.nononsenseapps.feeder/">RSS Feeds with Feeder</a>.</li>
-<li><a href="https://f-droid.org/packages/com.todobom.opennotescanner">PDF Scanner with Open Note Scanner</a>.</li>
+<li>PDF Scanner with <a href="https://f-droid.org/packages/com.todobom.opennotescanner">Open Note Scanner</a>
+or <a href="https://github.com/ethereal-developers/OpenScan">OpenScan</a>.</li>
 <li><a href="https://support.torproject.org/tormobile/tormobile-7">TorBrowser with Guardian Project&rsquo;s F-Droid Repository</a>.</li>
 <li><a href="https://f-droid.org/packages/net.osmand.plus">Navigation with OsmAnd+</a> and <a href="https://f-droid.org/packages/app.organicmaps/">Organic Maps</a>.</li>
 <li>Messaging with <a href="https://signal.org/android/apk/">Signal</a>,
