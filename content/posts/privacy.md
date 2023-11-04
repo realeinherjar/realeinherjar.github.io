@@ -396,7 +396,8 @@ The vital apps to have:
    There's an open source frontend for YouTube Music called [ViMusic](https://f-droid.org/packages/it.vfsfitvnm.vimusic/).
 1. Videos with [VLC](https://f-droid.org/packages/org.videolan.vlc/) or [mpv](https://f-droid.org/packages/is.xyz.mpv/).
 1. [RSS Feeds with Feeder](https://f-droid.org/packages/com.nononsenseapps.feeder/).
-1. [PDF Scanner with Open Note Scanner](https://f-droid.org/packages/com.todobom.opennotescanner).
+1. PDF Scanner with [Open Note Scanner](https://f-droid.org/packages/com.todobom.opennotescanner)
+   or [OpenScan](https://github.com/ethereal-developers/OpenScan).
 1. [TorBrowser with Guardian Project's F-Droid Repository](https://support.torproject.org/tormobile/tormobile-7).
 1. [Navigation with OsmAnd+](https://f-droid.org/packages/net.osmand.plus) and [Organic Maps](https://f-droid.org/packages/app.organicmaps/).
 1. Messaging with [Signal](https://signal.org/android/apk/),
