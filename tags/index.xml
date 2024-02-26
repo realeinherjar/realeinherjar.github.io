@@ -1,72 +1,73 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Tags on Einherjar</title>
-    <link>https://realeinherjar.github.io/tags/</link>
-    <description>Recent content in Tags on Einherjar</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Sat, 07 Oct 2023 09:29:09 -0300</lastBuildDate><atom:link href="https://realeinherjar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>bitcoin</title>
-      <link>https://realeinherjar.github.io/tags/bitcoin/</link>
-      <pubDate>Sat, 07 Oct 2023 09:29:09 -0300</pubDate>
-      
-      <guid>https://realeinherjar.github.io/tags/bitcoin/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tags on Einherjar</title>
+  <link rel="alternate" href="https://realeinherjar.github.io/tags/" />
+  <link rel="self" href="https://realeinherjar.github.io/tags/index.xml" />
+  <subtitle>Recent content in Tags on Einherjar</subtitle>
+  <id>https://realeinherjar.github.io/tags/</id>
+  <generator uri="http://gohugo.io" version="0.123.4">Hugo</generator>
+  <language>en-us</language>
+  <updated>2023-10-07T09:29:09-03:00</updated>
+  <author>
+    <name>Einherjar</name>
     
-    <item>
-      <title>cryptography</title>
-      <link>https://realeinherjar.github.io/tags/cryptography/</link>
-      <pubDate>Sat, 07 Oct 2023 09:29:09 -0300</pubDate>
-      
-      <guid>https://realeinherjar.github.io/tags/cryptography/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>cypherpunk</title>
-      <link>https://realeinherjar.github.io/tags/cypherpunk/</link>
-      <pubDate>Sat, 07 Oct 2023 09:29:09 -0300</pubDate>
-      
-      <guid>https://realeinherjar.github.io/tags/cypherpunk/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>privacy</title>
-      <link>https://realeinherjar.github.io/tags/privacy/</link>
-      <pubDate>Sat, 07 Oct 2023 09:29:09 -0300</pubDate>
-      
-      <guid>https://realeinherjar.github.io/tags/privacy/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>taproot</title>
-      <link>https://realeinherjar.github.io/tags/taproot/</link>
-      <pubDate>Sat, 02 Sep 2023 12:10:10 -0300</pubDate>
-      
-      <guid>https://realeinherjar.github.io/tags/taproot/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>opinion</title>
-      <link>https://realeinherjar.github.io/tags/opinion/</link>
-      <pubDate>Sat, 19 Aug 2023 18:07:18 +0000</pubDate>
-      
-      <guid>https://realeinherjar.github.io/tags/opinion/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-  </channel>
-</rss>
+  </author>
+  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>Bitcoin</title>
+        <link rel="alternate" href="https://realeinherjar.github.io/tags/bitcoin/" />
+        <id>https://realeinherjar.github.io/tags/bitcoin/</id>
+        <published>2023-10-07T09:29:09-03:00</published>
+        <updated>2023-11-04T13:09:50-04:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>Cryptography</title>
+        <link rel="alternate" href="https://realeinherjar.github.io/tags/cryptography/" />
+        <id>https://realeinherjar.github.io/tags/cryptography/</id>
+        <published>2023-10-07T09:29:09-03:00</published>
+        <updated>2023-11-04T13:09:50-04:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>Cypherpunk</title>
+        <link rel="alternate" href="https://realeinherjar.github.io/tags/cypherpunk/" />
+        <id>https://realeinherjar.github.io/tags/cypherpunk/</id>
+        <published>2023-10-07T09:29:09-03:00</published>
+        <updated>2023-11-04T13:09:50-04:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>Privacy</title>
+        <link rel="alternate" href="https://realeinherjar.github.io/tags/privacy/" />
+        <id>https://realeinherjar.github.io/tags/privacy/</id>
+        <published>2023-10-07T09:29:09-03:00</published>
+        <updated>2023-11-04T13:09:50-04:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>Taproot</title>
+        <link rel="alternate" href="https://realeinherjar.github.io/tags/taproot/" />
+        <id>https://realeinherjar.github.io/tags/taproot/</id>
+        <published>2023-09-02T12:10:10-03:00</published>
+        <updated>2023-10-06T07:38:31-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+      <entry>
+        <title>Opinion</title>
+        <link rel="alternate" href="https://realeinherjar.github.io/tags/opinion/" />
+        <id>https://realeinherjar.github.io/tags/opinion/</id>
+        <published>2023-08-19T18:07:18Z</published>
+        <updated>2023-10-06T07:38:31-03:00</updated>
+        <summary type="html"></summary>
+          <content type="html"><![CDATA[]]></content>
+      </entry>
+
+</feed>
+
+

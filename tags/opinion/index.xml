@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>opinion on Einherjar</title>
-    <link>https://realeinherjar.github.io/tags/opinion/</link>
-    <description>Recent content in opinion on Einherjar</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Sat, 19 Aug 2023 18:07:18 +0000</lastBuildDate><atom:link href="https://realeinherjar.github.io/tags/opinion/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>On Censorship</title>
-      <link>https://realeinherjar.github.io/2023-08-19-censorship/</link>
-      <pubDate>Sat, 19 Aug 2023 18:07:18 +0000</pubDate>
-      
-      <guid>https://realeinherjar.github.io/2023-08-19-censorship/</guid>
-      <description>In Brazil, there&amp;rsquo;s a new law that is being proposed that will allow the government to censor social media posts. The law is called PL 2630/2020 and it&amp;rsquo;s being called the &amp;ldquo;Fake News Law&amp;rdquo;. It&amp;rsquo;s a very dangerous law that will allow the government to censor any post that it deems &amp;ldquo;fake news&amp;rdquo;. The problem is that the definition of &amp;ldquo;fake news&amp;rdquo; is very broad and can be used to censor any post that the government doesn&amp;rsquo;t like.</description>
-      <content:encoded><![CDATA[<p>In Brazil, there&rsquo;s a new law that is being proposed that will allow the government to censor social media posts.
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Opinion on Einherjar</title>
+  <link rel="alternate" href="https://realeinherjar.github.io/tags/opinion/" />
+  <link rel="self" href="https://realeinherjar.github.io/tags/opinion/index.xml" />
+  <subtitle>Recent content in Opinion on Einherjar</subtitle>
+  <id>https://realeinherjar.github.io/tags/opinion/</id>
+  <generator uri="http://gohugo.io" version="0.123.4">Hugo</generator>
+  <language>en-us</language>
+  <updated>2023-08-19T18:07:18Z</updated>
+  <author>
+    <name>Einherjar</name>
+    
+  </author>
+  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>On Censorship</title>
+        <link rel="alternate" href="https://realeinherjar.github.io/2023-08-19-censorship/" />
+        <id>https://realeinherjar.github.io/2023-08-19-censorship/</id>
+        <published>2023-08-19T18:07:18Z</published>
+        <updated>2023-10-06T07:38:31-03:00</updated>
+        <summary type="html">In Brazil, there&amp;rsquo;s a new law that is being proposed that will allow the government to censor social media posts. The law is called PL 2630/2020 and it&amp;rsquo;s being called the &amp;ldquo;Fake News Law&amp;rdquo;. It&amp;rsquo;s a very dangerous law that will allow the government to censor any post that it deems &amp;ldquo;fake news&amp;rdquo;. The problem is that the definition of &amp;ldquo;fake news&amp;rdquo; is very broad and can be used to censor any post that the government doesn&amp;rsquo;t like.</summary>
+          <content type="html"><![CDATA[<p>In Brazil, there&rsquo;s a new law that is being proposed that will allow the government to censor social media posts.
 The law is called <a href="https://www.camara.leg.br/propostas-legislativas/2256735">PL 2630/2020</a> and it&rsquo;s being called the &ldquo;Fake News Law&rdquo;.
 It&rsquo;s a very dangerous law that will allow the government to censor any post that it deems &ldquo;fake news&rdquo;.
 The problem is that the definition of &ldquo;fake news&rdquo; is very broad and can be used to censor any post that the government doesn&rsquo;t like.</p>
@@ -54,8 +59,9 @@ But, I am gravely concerned with the precedents that the Brazilian government an
 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
 </a></p>
-]]></content:encoded>
-    </item>
-    
-  </channel>
-</rss>
+]]></content>
+      </entry>
+
+</feed>
+
+

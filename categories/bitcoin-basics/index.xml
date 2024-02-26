@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Bitcoin Basics on Einherjar</title>
-    <link>https://realeinherjar.github.io/categories/bitcoin-basics/</link>
-    <description>Recent content in Bitcoin Basics on Einherjar</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Sun, 01 Oct 2023 16:08:15 -0300</lastBuildDate><atom:link href="https://realeinherjar.github.io/categories/bitcoin-basics/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>What the hell is an Elliptic Curve?</title>
-      <link>https://realeinherjar.github.io/2023-10-08-elliptic_curves/</link>
-      <pubDate>Sun, 01 Oct 2023 16:08:15 -0300</pubDate>
-      
-      <guid>https://realeinherjar.github.io/2023-10-08-elliptic_curves/</guid>
-      <description>Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Bitcoin Basics on Einherjar</title>
+  <link rel="alternate" href="https://realeinherjar.github.io/categories/bitcoin-basics/" />
+  <link rel="self" href="https://realeinherjar.github.io/categories/bitcoin-basics/index.xml" />
+  <subtitle>Recent content in Bitcoin Basics on Einherjar</subtitle>
+  <id>https://realeinherjar.github.io/categories/bitcoin-basics/</id>
+  <generator uri="http://gohugo.io" version="0.123.4">Hugo</generator>
+  <language>en-us</language>
+  <updated>2023-10-01T16:08:15-03:00</updated>
+  <author>
+    <name>Einherjar</name>
+    
+  </author>
+  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>What the hell is an Elliptic Curve?</title>
+        <link rel="alternate" href="https://realeinherjar.github.io/2023-10-08-elliptic_curves/" />
+        <id>https://realeinherjar.github.io/2023-10-08-elliptic_curves/</id>
+        <published>2023-10-01T16:08:15-03:00</published>
+        <updated>2023-10-09T17:46:41-03:00</updated>
+        <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 Note: All elliptic curve images are made using $\LaTeX$ and TikZ. The source code is freely available at GitHub.
-What the hell is an Elliptic Curve? In this post, I&amp;rsquo;ll try to explain what an elliptic curve is, and why it&amp;rsquo;s so important in cryptography. If you ever used an end-to-end encrypted messaging app, or hold Bitcoin (or any other shitcoin, though I don&amp;rsquo;t recommend it), you&amp;rsquo;ve probably heard of elliptic curves.</description>
-      <content:encoded><![CDATA[<blockquote>
+What the hell is an Elliptic Curve? In this post, I&amp;rsquo;ll try to explain what an elliptic curve is, and why it&amp;rsquo;s so important in cryptography. If you ever used an end-to-end encrypted messaging app, or hold Bitcoin (or any other shitcoin, though I don&amp;rsquo;t recommend it), you&amp;rsquo;ve probably heard of elliptic curves.</summary>
+          <content type="html"><![CDATA[<blockquote>
 <p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
 so if you want to view the rendered math formulas,
 you&rsquo;ll have to unfortunately enable JavaScript.</p>
@@ -365,19 +370,18 @@ in their <a href="https://www.secg.org/sec2-v2.pdf">SEC 2 specification</a>.&#16
 </li>
 </ol>
 </div>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Taproot Basics</title>
-      <link>https://realeinherjar.github.io/2023-09-08-taproot/</link>
-      <pubDate>Sat, 02 Sep 2023 12:10:10 -0300</pubDate>
-      
-      <guid>https://realeinherjar.github.io/2023-09-08-taproot/</guid>
-      <description>Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
+]]></content>
+      </entry>
+      <entry>
+        <title>Taproot Basics</title>
+        <link rel="alternate" href="https://realeinherjar.github.io/2023-09-08-taproot/" />
+        <id>https://realeinherjar.github.io/2023-09-08-taproot/</id>
+        <published>2023-09-02T12:10:10-03:00</published>
+        <updated>2023-10-06T07:38:31-03:00</updated>
+        <summary type="html">Warning: This post has KaTeX enabled, so if you want to view the rendered math formulas, you&amp;rsquo;ll have to unfortunately enable JavaScript.
 While attending the 2023 edition of TabConf, hosted in Atlanta, USA, from Sep 6th to Sep 9th, I also attended Base58&amp;rsquo;s intensive course on Taproot and Schnorr signatures. The course took place in the two days before the conference, on Sep 4th and Sep 5th.
-Here is a very broad overview based on my notes, a bunch of readings and some of my own research.</description>
-      <content:encoded><![CDATA[<blockquote>
+Here is a very broad overview based on my notes, a bunch of readings and some of my own research.</summary>
+          <content type="html"><![CDATA[<blockquote>
 <p>Warning: This post has <a href="https://katex.org/">KaTeX</a> enabled,
 so if you want to view the rendered math formulas,
 you&rsquo;ll have to unfortunately enable JavaScript.</p>
@@ -608,8 +612,9 @@ Check <a href="https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki">B
 </li>
 </ol>
 </div>
-]]></content:encoded>
-    </item>
-    
-  </channel>
-</rss>
+]]></content>
+      </entry>
+
+</feed>
+
+

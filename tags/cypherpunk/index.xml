@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>cypherpunk on Einherjar</title>
-    <link>https://realeinherjar.github.io/tags/cypherpunk/</link>
-    <description>Recent content in cypherpunk on Einherjar</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-    <lastBuildDate>Sat, 07 Oct 2023 09:29:09 -0300</lastBuildDate><atom:link href="https://realeinherjar.github.io/tags/cypherpunk/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Privacy Basics</title>
-      <link>https://realeinherjar.github.io/privacy/</link>
-      <pubDate>Sat, 07 Oct 2023 09:29:09 -0300</pubDate>
-      
-      <guid>https://realeinherjar.github.io/privacy/</guid>
-      <description>Why Privacy is Important? First, the definition of privacy according to the Cyphepunk Manifesto:
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Cypherpunk on Einherjar</title>
+  <link rel="alternate" href="https://realeinherjar.github.io/tags/cypherpunk/" />
+  <link rel="self" href="https://realeinherjar.github.io/tags/cypherpunk/index.xml" />
+  <subtitle>Recent content in Cypherpunk on Einherjar</subtitle>
+  <id>https://realeinherjar.github.io/tags/cypherpunk/</id>
+  <generator uri="http://gohugo.io" version="0.123.4">Hugo</generator>
+  <language>en-us</language>
+  <updated>2023-10-07T09:29:09-03:00</updated>
+  <author>
+    <name>Einherjar</name>
+    
+  </author>
+  <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
+      <entry>
+        <title>Privacy Basics</title>
+        <link rel="alternate" href="https://realeinherjar.github.io/privacy/" />
+        <id>https://realeinherjar.github.io/privacy/</id>
+        <published>2023-10-07T09:29:09-03:00</published>
+        <updated>2023-11-04T13:09:50-04:00</updated>
+        <summary type="html">Why Privacy is Important? First, the definition of privacy according to the Cyphepunk Manifesto:
 Privacy is necessary for an open society in the electronic age. Privacy is not secrecy. A private matter is something one doesn&amp;rsquo;t want the whole world to know, but a secret matter is something one doesn&amp;rsquo;t want anybody to know. Privacy is the power to selectively reveal oneself to the world.
-Privacy is not just a personal preference but a fundamental right that is essential for protecting individual freedom, democracy, and the integrity of the digital world.</description>
-      <content:encoded><![CDATA[<h2 id="why-privacy-is-important">Why Privacy is Important?</h2>
+Privacy is not just a personal preference but a fundamental right that is essential for protecting individual freedom, democracy, and the integrity of the digital world.</summary>
+          <content type="html"><![CDATA[<h2 id="why-privacy-is-important">Why Privacy is Important?</h2>
 <p>First, the definition of privacy according to the <a href="https://nakamotoinstitute.org/cypherpunk-manifesto">Cyphepunk Manifesto</a>:</p>
 <blockquote>
 <p>Privacy is necessary for an open society in the electronic age.
@@ -747,8 +752,9 @@ or <a href="https://lnvpn.net/phone-numbers">LNSMS</a></li>
 <p>This post is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img loading="lazy" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0"  />
 </a></p>
-]]></content:encoded>
-    </item>
-    
-  </channel>
-</rss>
+]]></content>
+      </entry>
+
+</feed>
+
+
